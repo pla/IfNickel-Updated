@@ -18,18 +18,10 @@ data:extend({
     type = "recipe",
     name = "invar-valve",
     category = "advanced-crafting",
-    normal = {
-      enabled = false,
-      energy_required = 3,
-      ingredients = {{"invar-plate", 1}, {"pipe", 2}, parts.preferred({"airtight-seal", "brass-plate", "copper-plate"}, {1, 2, 2})},
-      result = "invar-valve"
-    },
-    expensive = {
-      enabled = false,
-      energy_required = 3,
-      ingredients = {{"invar-plate", 1}, {"pipe", 2}, parts.preferred({"airtight-seal", "brass-plate", "copper-plate"}, {1, 2, 4})}, --brass is doublecosted
-      result = "invar-valve"
-    }
+    enabled = false,
+    energy_required = 3,
+    ingredients = {{type="item", name="invar-plate", amount=1}, {type="item", name="pipe", amount=2}, parts.preferred({"airtight-seal", "brass-plate", "copper-plate"}, {1, 2, 2})},
+    result = "invar-valve",
   }
 
 })
@@ -41,18 +33,10 @@ if not mods["aai-industry"] then
         type = "recipe",
         name = "motor",
         category = "crafting",
-        normal = {
-          energy_required = 1,
-          ingredients = {{"nickel-plate", 4}, {"iron-stick", 2}, {"aluminum-cable", 1}},
-          result = "motor",
-          result_count = 2
-        },
-        expensive = {
-          energy_required = 1,
-          ingredients = {{"nickel-plate", 8}, {"iron-stick", 2}, {"aluminum-cable", 1}},
-          result = "motor",
-          result_count = 2
-        }
+        energy_required = 1,
+        ingredients = {{type="item", name="nickel-plate", amount=4}, {type="item", name="iron-stick", amount=2}, {type="item", name="aluminum-cable", amount=1}},
+        result = "motor",
+        result_count = 2,
       }
     })
   else
@@ -61,16 +45,9 @@ if not mods["aai-industry"] then
         type = "recipe",
         name = "motor",
         category = "crafting",
-        normal = {
-          energy_required = 0.5,
-          ingredients = {{"nickel-plate", 2}, {"iron-stick", 1}, {"copper-cable", 2}},
-          result = "motor"
-        },
-        expensive = {
-          energy_required = 0.5,
-          ingredients = {{"nickel-plate", 4}, {"iron-stick", 1}, {"copper-cable", 4}},
-          result = "motor"
-        }
+        energy_required = 0.5,
+        ingredients = {{type="item", name="nickel-plate", amount=2}, {type="item", name="iron-stick", amount=1}, {type="item", name="copper-cable", amount=2}},
+        result = "motor",
       }
     })
   end
@@ -83,7 +60,7 @@ if not mods["galdocs-manufacturing"] then
       name = "nickel-plate",
       category = "smelting",
       energy_required = 3.2 * yield,
-      ingredients = {{"nickel-ore", cost}},
+      ingredients = {{type="item", name="nickel-ore", amount=cost}},
       result = "nickel-plate",
       result_count = yield
     }
@@ -94,21 +71,10 @@ if not mods["galdocs-manufacturing"] then
         type = "recipe",
         name = "invar-plate",
         category = parts.foundryEnabled and "founding" or "smelting",
-        normal = {
-          enabled = false,
-          energy_required = 6.4,
-          ingredients = {{"iron-plate", 2}, {"nickel-plate", 2}},
-          result = "invar-plate"
-        },
-        expensive = {
-          enabled = false,
-          energy_required = 6.4,
-          ingredients = {{"iron-plate", 2}, {"nickel-plate", 4}},
-          result = "invar-plate",
-          --a realistic ratio would be 66% iron  33% nickel
-          --however there's no rule that each plate item represents the same mass
-          --also i think this is just better balancewise. steel already very iron-expensive.
-        }
+        enabled = false,
+        energy_required = 6.4,
+        ingredients = {{type="item", name="iron-plate", amount=2}, {type="item", name="nickel-plate", amount=2}},
+        result = "invar-plate",
       }
     })
   else
@@ -117,18 +83,10 @@ if not mods["galdocs-manufacturing"] then
         type = "recipe",
         name = "invar-precursor",
         category = "crafting",
-        normal = {
-          enabled = false,
-          energy_required = 0.5,
-          ingredients = {{"iron-plate", 2}, {"nickel-plate", 2}},
-          result = "invar-precursor"
-        },
-        expensive = {
-          enabled = false,
-          energy_required = 0.5,
-          ingredients = {{"iron-plate", 2}, {"nickel-plate", 6}},
-          result = "invar-precursor"
-        }
+        enabled = false,
+        energy_required = 0.5,
+        ingredients = {{type="item", name="iron-plate", amount=2}, {type="item", name="nickel-plate", amount=2}},
+        result = "invar-precursor",
       },
       {
         type = "recipe",
@@ -136,7 +94,7 @@ if not mods["galdocs-manufacturing"] then
         category = "smelting",
         energy_required = 6.4,
         enabled = false,
-        ingredients = {{"invar-precursor", 1}},
+        ingredients = {{type="item", name="invar-precursor", amount=1}},
         result = "invar-plate"
       }
     })
@@ -152,25 +110,18 @@ if parts.experimental then
       category = "crafting",
       energy_required = 2,
       enabled = false,
-      ingredients = {parts.preferred({"electric-motor", "motor"}, {2, 2}), {"electronic-circuit", 1}, parts.preferred({"articulated-mechanism", "inserter-parts", "iron-gear-wheel"}, {2, 1, 2}), parts.optionalIngredient("bronze-plate", 2)},
+      ingredients = {parts.preferred({"electric-motor", "motor"}, {2, 2}), {type="item", name="electronic-circuit", amount=1}, parts.preferred({"articulated-mechanism", "inserter-parts", "iron-gear-wheel"}, 
+        {2, 1, 2}), parts.optionalIngredient("bronze-plate", 2)},
       result = "motorized-articulator"
     },
     {
       type = "recipe",
       name = "cooling-fan",
       category = "advanced-crafting",
-      normal = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {"plastic-bar", 4}},
-        result = "cooling-fan"
-      },
-      expensive = {
-        energy_required = 2,
-        enabled = false,
-        ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {"plastic-bar", 8}},
-        result = "cooling-fan"
-      }
+      energy_required = 2,
+      enabled = false,
+      ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="plastic-bar", amount=4}},
+      result = "cooling-fan",
     },
     {
       type = "recipe",
@@ -178,8 +129,9 @@ if parts.experimental then
       category = "crafting",
       energy_required = 30,
       enabled = false,
-      ingredients = {{"motorized-articulator", 1}, {"invar-valve", 1}, parts.preferred({"rocket-engine-nozzle", "se-heat-shielding", "invar-plate"}, {2, 1, 2}), parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4})},
-      result = "gimbaled-thruster"
+      ingredients = {{type="item", name="motorized-articulator", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"rocket-engine-nozzle", "se-heat-shielding", "invar-plate"}, {2, 1, 2}), 
+        parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4})},
+      result = "gimbaled-thruster",
     },
     {
       type = "recipe",
@@ -187,7 +139,7 @@ if parts.experimental then
       category = "crafting",
       energy_required = 2,
       enabled = false,
-      ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {"invar-valve", 1}, {"electronic-circuit", 1}, parts.preferred({"tinned-cable", "glass"}, {2, 1})},
+      ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="invar-valve", amount=1}, {type="item", name="electronic-circuit", amount=1}, parts.preferred({"tinned-cable", "glass"}, {2, 1})},
       result = "flow-controller"
     }
   })
@@ -200,12 +152,12 @@ if parts.experimental then
         category = "crafting",
         energy_required = 2,
         enabled = false,
-        icon = "__IfNickel__/graphics/icons/gimbaled-thruster-packed.png",
+        icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster-packed.png",
         icon_size = 64,
         subgroup = "ll-packed-rocket-ingredients",
         localised_name = {"recipe-name.pack-gimbaled-thruster"},
         order = "za",
-        ingredients = {{"gimbaled-thruster", 5}},
+        ingredients = {{type="item", name="gimbaled-thruster", amount=5}},
         results = {{type="item", name="gimbaled-thruster-packed", amount=1}}
       },
       {
@@ -214,12 +166,12 @@ if parts.experimental then
         category = "crafting",
         energy_required = 2,
         enabled = false,
-        icon = "__IfNickel__/graphics/icons/gimbaled-thruster-packed.png",
+        icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster-packed.png",
         icon_size = 64,
         subgroup = "ll-packed-rocket-ingredients",
         localised_name = {"recipe-name.unpack-gimbaled-thruster"},
         order = "zb",
-        ingredients = {{"gimbaled-thruster-packed", 1}},
+        ingredients = {{type="item", name="gimbaled-thruster-packed", amount=1}},
         results = {{type="item", name="gimbaled-thruster", amount=5}}
       }
     })
@@ -233,7 +185,7 @@ if parts.experimental then
         category = "crafting",
         energy_required = 2,
         enabled = false,
-        ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {"motorized-articulator", 1}, parts.preferred({"tungsten-carbide", "steel-plate"}, {2, 1})},
+        ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="motorized-articulator", amount=1}, parts.preferred({"tungsten-carbide", "steel-plate"}, {2, 1})},
         result = "machining-tool"
       },
       {
@@ -242,7 +194,7 @@ if parts.experimental then
         category = "crafting",
         energy_required = 4,
         enabled = false,
-        ingredients = {{"machining-tool", 1}, parts.optionalIngredient("diamond", 1), parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4}), {"speed-module", 1}},
+        ingredients = {{type="item", name="machining-tool", amount=1}, parts.optionalIngredient("diamond", 1), parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4}), {type="item", name="speed-module", amount=1}},
         result = "advanced-machining-tool"
       }
     })
@@ -260,7 +212,7 @@ if parts.experimental then
         category = "crafting",
         energy_required = 2,
         enabled = false,
-        ingredients = {{"electronic-circuit", 1}, {"nickel-plate", 4}, {"copper-cable", 4}},
+        ingredients = {{type="item", name="electronic-circuit", amount=1}, {type="item", name="nickel-plate", amount=4}, {type="item", name="copper-cable", amount=4}},
         result = "nickel-electromagnet",
         result_count = 4
       },
@@ -271,7 +223,7 @@ if parts.experimental then
         energy_required = 8,
         enabled = false,
         allow_decomposition = false,
-        ingredients = {{"flow-controller", 2}, {"invar-valve", 2}, {"advanced-circuit", 1}, parts.preferred({"kr-steel-pipe", "pipe"}, {4, 10})},
+        ingredients = {{type="item", name="flow-controller", amount=2}, {type="item", name="invar-valve", amount=2}, {type="item", name="advanced-circuit", amount=1}, parts.preferred({"kr-steel-pipe", "pipe"}, {4, 10})},
         result = "advanced-flow-controller"
       },
       {
@@ -280,7 +232,7 @@ if parts.experimental then
         category = "advanced-crafting",
         icons = {
           {
-            icon = "__IfNickel__/graphics/icons/flow-controller.png",
+            icon = "__IfNickel-Updated__/graphics/icons/flow-controller.png",
             icon_size = 64
           },
           {
@@ -293,8 +245,9 @@ if parts.experimental then
         energy_required = 9,
         enabled = false,
         allow_decomposition = false,
-        ingredients = {{"electric-motor", 1}, {"invar-valve", 3}, {"electronic-circuit", 1}, {"se-vitamelange-bloom", 2}, parts.preferred({"tinned-cable", "glass"}, {3, 3})},
-        results = {{"flow-controller", 3}},
+        ingredients = {{type="item", name="electric-motor", amount=1}, {type="item", name="invar-valve", amount=3}, {type="item", name="electronic-circuit", amount=1}, {type="item", name="se-vitamelange-bloom", amount=2},
+          parts.preferred({"tinned-cable", "glass"}, {3, 3})},
+        results = {{type="item", name="flow-controller", amount=3}},
         main_product = "flow-controller"
       },
       {
@@ -303,7 +256,7 @@ if parts.experimental then
         category = "advanced-crafting",
         icons = {
           {
-            icon = "__IfNickel__/graphics/icons/advanced-flow-controller.png",
+            icon = "__IfNickel-Updated__/graphics/icons/advanced-flow-controller.png",
             icon_size = 64
           },
           {
@@ -315,8 +268,9 @@ if parts.experimental then
          },
         energy_required = 30,
         enabled = false,
-        ingredients = {{"flow-controller", 6}, parts.preferred({"self-regulating-valve", "invar-valve"}, {2, 2}), {"advanced-circuit", 1}, parts.preferred({"kr-steel-pipe", "pipe"}, {12, 30}), {"se-vitamelange-bloom", 5}},
-        results = {{"advanced-flow-controller", 3}},
+        ingredients = {{type="item", name="flow-controller", amount=6}, parts.preferred({"self-regulating-valve", "invar-valve"}, {2, 2}), {type="item", name="advanced-circuit", amount=1}, 
+          parts.preferred({"kr-steel-pipe", "pipe"}, {12, 30}), {type="item", name="se-vitamelange-bloom", amount=5}},
+        results = {{type="item", name="advanced-flow-controller", 3}},
         main_product = "advanced-flow-controller"
       }
     })
@@ -332,8 +286,8 @@ if mods["Krastorio2"] then
         name = "enriched-nickel",
         category = "chemistry",
         energy_required = 3,
-        ingredients = {{"nickel-ore", 9}, {type="fluid", name="sulfuric-acid", amount=3}, {type="fluid", name="water", amount=25, catalyst_amount = 25}},
-        results = {{"enriched-nickel", mods["space-exploration"] and 9 or 6}, {type="fluid", name="dirty-water", amount=25, catalyst_amount=25}},
+        ingredients = {{type="item", name="nickel-ore", amount=9}, {type="fluid", name="sulfuric-acid", amount=3}, {type="fluid", name="water", amount=25, catalyst_amount = 25}},
+        results = {{type="item", name="enriched-nickel", mods["space-exploration"] and 9 or 6}, {type="fluid", name="dirty-water", amount=25, catalyst_amount=25}},
         main_product = "enriched-nickel",
         enabled = false,
         crafting_machine_tint = {
@@ -347,12 +301,12 @@ if mods["Krastorio2"] then
         type = "recipe",
         name = "enriched-nickel-plate",
         icons = {
-          { icon = "__IfNickel__/graphics/icons/nickel-plate.png", icon_size = 64 },
-          { icon = "__IfNickel__/graphics/icons/enriched-nickel.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+          { icon = "__IfNickel-Updated__/graphics/icons/nickel-plate.png", icon_size = 64 },
+          { icon = "__IfNickel-Updated__/graphics/icons/enriched-nickel.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
         category = "smelting",
         energy_required = 16,
-        ingredients = {{"enriched-nickel", 5}},
+        ingredients = {{type="item", name="enriched-nickel", amount=5}},
         result = "nickel-plate",
         result_count = 5,
         enabled = false
@@ -370,7 +324,7 @@ if mods["Krastorio2"] then
     				icon_size = data.raw.fluid["dirty-water"].icon_size
     			},
     			{
-    				icon = "__IfNickel__/graphics/icons/nickel-ore.png",
+    				icon = "__IfNickel-Updated__/graphics/icons/nickel-ore.png",
     				icon_size =	64,
     				scale = 0.2,
     				shift = {0, 4}
@@ -425,13 +379,13 @@ if mods["space-exploration"] then
     {
       {
         type = "recipe",
-        icon = "__IfNickel__/graphics/icons/molten-nickel.png",
+        icon = "__IfNickel-Updated__/graphics/icons/molten-nickel.png",
         icon_size = 64,
         subgroup = "nickel",
         name = "molten-nickel",
         category = "smelting",
         energy_required = 60,
-        ingredients = {{mods["Krastorio2"] and "enriched-nickel" or "nickel-ore", 24}, {type="fluid", name="se-pyroflux", amount=10}},
+        ingredients = {{type="item", name=mods["Krastorio2"] and "enriched-nickel" or "nickel-ore", amount=24}, {type="fluid", name="se-pyroflux", amount=10}},
         results = {{type="fluid", name="molten-nickel", amount= mods["Krastorio2"] and 750 or 900}},
         enabled = false
       },
@@ -449,12 +403,12 @@ if mods["space-exploration"] then
         type = "recipe",
         name = "nickel-ingot-to-plate",
         icons = {
-          { icon = "__IfNickel__/graphics/icons/nickel-plate.png", icon_size = 64 },
-          { icon = "__IfNickel__/graphics/icons/nickel-ingot.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+          { icon = "__IfNickel-Updated__/graphics/icons/nickel-plate.png", icon_size = 64 },
+          { icon = "__IfNickel-Updated__/graphics/icons/nickel-ingot.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
         category = "crafting",
         energy_required = 5,
-        ingredients = {{"nickel-ingot", 1}},
+        ingredients = {{type="item", name="nickel-ingot", amount=1}},
         result = "nickel-plate",
         result_count = 10,
         allow_decomposition = false,
@@ -474,12 +428,12 @@ if mods["space-exploration"] then
         type = "recipe",
         name = "invar-ingot-to-plate",
         icons = {
-          { icon = "__IfNickel__/graphics/icons/invar-plate.png", icon_size = 64 },
-          { icon = "__IfNickel__/graphics/icons/invar-ingot.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
+          { icon = "__IfNickel-Updated__/graphics/icons/invar-plate.png", icon_size = 64 },
+          { icon = "__IfNickel-Updated__/graphics/icons/invar-ingot.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
         category = "crafting",
         energy_required = 5,
-        ingredients = {{"invar-ingot", 1}},
+        ingredients = {{type="item", name="invar-ingot", amount=1}},
         result = "invar-plate",
         result_count = 10,
         allow_decomposition = false,
@@ -497,7 +451,7 @@ if parts.nitinol then
         name = "nitinol-plate",
         category = parts.foundryEnabled and "founding" or "smelting",
         energy_required = 16,
-        ingredients = {{"nickel-plate", 3}, {"titanium-plate", 1}},
+        ingredients = {{type="item", name="nickel-plate", amount=3}, {type="item", name="titanium-plate", amount=1}},
         result = "nitinol-plate",
         enabled = false,
         result_count = 2
@@ -510,7 +464,7 @@ if parts.nitinol then
         name = "nitinol-precursor",
         category = "crafting",
         energy_required = 0.5,
-        ingredients = {{"nickel-plate", 3}, {"titanium-plate", 1}},
+        ingredients = {{type="item", name="nickel-plate", amount=3}, {type="item", name="titanium-plate", amount=1}},
         result = "nitinol-precursor",
         enabled = false,
         result_count = 2
@@ -520,7 +474,7 @@ if parts.nitinol then
         name = "nitinol-plate",
         category = "smelting",
         energy_required = 8,
-        ingredients = {{"nitinol-precursor", 1}},
+        ingredients = {{type="item", name="nitinol-precursor", amount=1}},
         result = "nitinol-plate",
         enabled = false,
         result_count = 1
@@ -534,7 +488,7 @@ if parts.nitinol then
       category = "space-thermodynamics",
       icons = {
         {
-          icon = "__IfNickel__/graphics/icons/nitinol-plate.png",
+          icon = "__IfNickel-Updated__/graphics/icons/nitinol-plate.png",
           icon_size = 64
         },
         {
@@ -545,7 +499,7 @@ if parts.nitinol then
         }
       },
       energy_required = 32,
-      ingredients = {{"nickel-plate", 3}, {"titanium-plate", 1}},
+      ingredients = {{type="item", name="nickel-plate", amount=3}, {type="item", name="titanium-plate", amount=1}},
       result = "nitinol-plate",
       enabled = false,
       result_count = 4
@@ -555,7 +509,7 @@ if parts.nitinol then
       name = "self-regulating-valve",
       category = "advanced-crafting",
       energy_required = 8,
-      ingredients = {{"nitinol-plate", 1}, {"invar-valve", 1}, parts.preferred({"titanium-palladium-flange", "titanium-plate"}, {2, 2})},
+      ingredients = {{type="item", name="nitinol-plate", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"titanium-palladium-flange", "titanium-plate"}, {2, 2})},
       result = "self-regulating-valve",
       enabled = false,
       result_count = 2
@@ -565,7 +519,7 @@ if parts.nitinol then
       name = "nitinol-mesh",
       category = "advanced-crafting",
       energy_required = 8,
-      ingredients = {{"nitinol-plate", 3}, parts.preferred({"aluminum-2219", "iron-stick"}, {2, 4}), parts.preferred({"carbon-fiber", "plastic-bar"}, {2, 2})},
+      ingredients = {{type="item", name="nitinol-plate", amount=3}, parts.preferred({"aluminum-2219", "iron-stick"}, {2, 4}), parts.preferred({"carbon-fiber", "plastic-bar"}, {2, 2})},
       result = "nitinol-mesh",
       enabled = false,
       result_count = 2,
@@ -584,7 +538,7 @@ if parts.nitinol then
       category = "advanced-crafting",
       icons = {
         {
-          icon = "__IfNickel__/graphics/icons/nitinol-mesh.png",
+          icon = "__IfNickel-Updated__/graphics/icons/nitinol-mesh.png",
           icon_size = 64
         },
         {
@@ -595,7 +549,7 @@ if parts.nitinol then
         }
       },
       energy_required = 24,
-      ingredients = {{"nitinol-plate", 6}, {"se-beryllium-plate", 1}, parts.preferred({"carbon-fiber", "plastic-bar"}, {4, 4})},
+      ingredients = {{type="item", name="nitinol-plate", amount=6}, {type="item", name="se-beryllium-plate", amount=1}, parts.preferred({"carbon-fiber", "plastic-bar"}, {4, 4})},
       result = "nitinol-mesh",
       enabled = false,
       result_count = 6,
@@ -617,7 +571,7 @@ if parts.nitinol then
         category = "smelting",
         icons = {
           {
-            icon = "__IfNickel__/graphics/icons/nitinol-plate.png",
+            icon = "__IfNickel-Updated__/graphics/icons/nitinol-plate.png",
             icon_size = 64
           },
           {
@@ -628,7 +582,7 @@ if parts.nitinol then
           }
         },
         energy_required = 32,
-        ingredients = {{"nickel-plate", 3}, {"titanium-plate", 1}, {type="fluid", name="helium", amount=6}},
+        ingredients = {{type="item", name="nickel-plate", amount=3}, {type="item", name="titanium-plate", amount=1}, {type="fluid", name="helium", amount=6}},
         result = "nitinol-plate",
         enabled = false,
         result_count = 4
@@ -656,7 +610,7 @@ if mods["FreightForwarding"] then
       category = "chemistry",
       energy_required = 15,
       allow_decomposition = false,
-      ingredients = {{"meteoric-nodule", 18}, {type="fluid", name="sulfuric-acid", amount=15}},
+      ingredients = {{type="item", name="meteoric-nodule", amount=18}, {type="fluid", name="sulfuric-acid", amount=15}},
       results = {{type="item", name="nickel-ore", amount_min=40, amount_max=50}, {type="item", name="iron-ore", amount_min=0, amount_max=8}, {type="item", name="stone", amount_min=0, amount_max=4}, {type="item", name="meteoric-nodule", amount_min=0, amount_max=6}},
       main_product = "nickel-ore",
       enabled = false,
