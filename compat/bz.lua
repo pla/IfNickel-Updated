@@ -6,14 +6,14 @@ local cu = require("category-utils")
 local u = require("util")
 
 if mods["bzgas"] then
-  rm.AddIngredient("gas-extractor", parts.motor, 1, 1)
+  rm.AddIngredient("gas-extractor", parts.motor, 1)
 end
 
 if mods["bztin"] and parts.experimental then
-  rm.AddIngredient("cooling-fan", "solder", 1, 1)
+  rm.AddIngredient("cooling-fan", "solder", 1)
   --these use significantly more solder than cooling fans. however cooling fans are used for a lot of other things in high demand (blue circuits)
-  rm.RemoveIngredient("roboport", "solder", 20, 20)
-  rm.RemoveIngredient("substation", "solder", 2, 2)
+  rm.RemoveIngredient("roboport", "solder", 20)
+  rm.RemoveIngredient("substation", "solder", 2)
 
   if data.raw.item["tinned-cable"] then
     tf.addPrereq("valves", "tinned-cable")
@@ -37,17 +37,17 @@ if mods["bzgold"] then
 
   if data.raw.item["silver-brazing-alloy"] and rm.CheckIngredient("invar-valve", "copper-plate") then
     tf.addPrereq("valves", "silver-processing")
-    rm.ReplaceIngredient("invar-valve", "copper-plate", "silver-brazing-alloy", 2, 4)
-    rm.RemoveIngredient("pumpjack", "silver-brazing-alloy", 99999, 99999)
-    rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999, 99999)
-    rm.RemoveIngredient("oil-refinery", "silver-brazing-alloy", 99999, 99999)
-    rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999, 99999)
+    rm.ReplaceIngredient("invar-valve", "copper-plate", "silver-brazing-alloy", 2)
+    rm.RemoveIngredient("pumpjack", "silver-brazing-alloy", 99999)
+    rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999)
+    rm.RemoveIngredient("oil-refinery", "silver-brazing-alloy", 99999)
+    rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999)
   else if rm.CheckIngredient("invar-valve", "airtight-seal") then
     --airtight seal will have SBA
-    rm.RemoveIngredient("pumpjack", "silver-brazing-alloy", 99999, 99999)
-    rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999, 99999)
-    rm.RemoveIngredient("oil-refinery", "silver-brazing-alloy", 99999, 99999)
-    rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999, 99999)
+    rm.RemoveIngredient("pumpjack", "silver-brazing-alloy", 99999)
+    rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999)
+    rm.RemoveIngredient("oil-refinery", "silver-brazing-alloy", 99999)
+    rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999)
   end end
 
   if mods["ThemTharHills"] or not mods["space-exploration"] then
@@ -57,25 +57,25 @@ if mods["bzgold"] then
         tf.removePrereq("advanced-electronics-2", "temperature-regulation")
         tf.removePrereq("injection-molding", "chemical-science-pack")
         tf.addPrereq("injection-molding", "temperature-regulation")
-        rm.RemoveIngredient("mainboard", "temperature-sensor", 99999, 99999)
-        rm.ReplaceIngredient("cooling-fan", "plastic-bar", "temperature-sensor", 1, 1)
+        rm.RemoveIngredient("mainboard", "temperature-sensor", 99999)
+        rm.ReplaceIngredient("cooling-fan", "plastic-bar", "temperature-sensor", 1)
       end
     end
 
     if data.raw.item["titanium-palladium-flange"] and data.raw.item["advanced-flow-controller"] then
       tf.addPrereq("advanced-flow-controller", "palladium-processing")
-      rm.AddIngredient("advanced-flow-controller", "titanium-palladium-flange", 2, 2)
-      rm.AddIngredient("advanced-flow-controller-biological", "titanium-palladium-flange", 6, 6)
+      rm.AddIngredient("advanced-flow-controller", "titanium-palladium-flange", 2)
+      rm.AddIngredient("advanced-flow-controller-biological", "titanium-palladium-flange", 6)
     end
   end
 
   if rm.CheckIngredient("rocket-control-unit", "temperature-sensor") and data.raw.item["gimbaled-thruster"] then
     --rcu is getting a bit overcrowded and the temp sensor should be in the part of the rocket that might plausibly overheat anyway
-    rm.RemoveIngredient("rocket-control-unit", "temperature-sensor", 99999, 99999)
+    rm.RemoveIngredient("rocket-control-unit", "temperature-sensor", 99999)
     if mods["space-exploration"] and mods["ThemTharHills"] then
-      rm.AddIngredient("gimbaled-thruster", "temperature-sensor", 1, 1)
+      rm.AddIngredient("gimbaled-thruster", "temperature-sensor", 1)
     else if not mods["space-exploration"] then
-      rm.AddIngredient("gimbaled-thruster", "temperature-sensor", 2, 2)
+      rm.AddIngredient("gimbaled-thruster", "temperature-sensor", 2)
     end end
   end
 
@@ -100,7 +100,7 @@ if mods["bzgold"] then
     else
       motor2.icons = {
         {
-            icon = "__IfNickel__/graphics/icons/motor.png",
+            icon = "__IfNickel-Updated__/graphics/icons/motor.png",
             icon_size = 64
           },
           {

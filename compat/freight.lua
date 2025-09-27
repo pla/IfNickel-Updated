@@ -3,20 +3,20 @@ local tf = require("techfuncs")
 local parts = require("variable-parts")
 
 if mods["cargo-ships"] then
-  rm.AddIngredient("oil_tanker", "invar-valve", 10, 10)
+  rm.AddIngredient("oil_tanker", "invar-valve", 10)
 
   if parts.experimental then
     rm.ReplaceProportional("oil_rig", "electronic-circuit", "flow-controller", 1/3)
-    rm.AddIngredient("bridge_base", "motorized-articulator", 10, 10)
+    rm.AddIngredient("bridge_base", "motorized-articulator", 10)
   else
     rm.ReplaceProportional("oil_rig", "pipe", "invar-valve", 1/3)
-    rm.AddIngredient("bridge_base", parts.motor, 30, 30)
+    rm.AddIngredient("bridge_base", parts.motor, 30)
   end
 
   --orc code
   if rm.CheckIngredient("oil_rig", "steel-beam") then
-    rm.RemoveIngredient("oil_rig", "steel-beam", 30, 30)
-    rm.AddIngredient("oil_rig", "steel-beam", 30, 30)
+    rm.RemoveIngredient("oil_rig", "steel-beam", 30)
+    rm.AddIngredient("oil_rig", "steel-beam", 30)
   end
 end
 

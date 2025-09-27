@@ -6,31 +6,31 @@ local cu = require("category-utils")
 if mods["space-exploration"] then
   if parts.experimental then
     if mods["Krastorio2"] then
-      rm.AddIngredient("se-processing-unit-holmium", "cooling-fan", 2, 2)
+      rm.AddIngredient("se-processing-unit-holmium", "cooling-fan", 2)
     else
-      rm.AddIngredient("se-processing-unit-holmium", "cooling-fan", 1, 1)
+      rm.AddIngredient("se-processing-unit-holmium", "cooling-fan", 1)
     end
   end
 
-  rm.RemoveProduct("se-core-fragment-omni", "nickel-ore", 4, 4)
+  rm.RemoveProduct("se-core-fragment-omni", "nickel-ore", 4)
   tf.addPrereq("rocket-silo", "gimbaled-thruster")
 end
 
 if rm.CheckIngredient("flow-controller", "automation-core") then
   --no actually i want that there
-  rm.AddIngredient("flow-controller", "electronic-circuit", 1, 1)
+  rm.AddIngredient("flow-controller", "electronic-circuit", 1)
   if rm.CheckIngredient("flow-controller", "tinned-cable") then
     --I want this recipe to max out at 4 ingredients
-    rm.RemoveIngredient("flow-controller", "automation-core", 1, 1)
+    rm.RemoveIngredient("flow-controller", "automation-core", 1)
   else
     --only want SE glass in the recipe
-    rm.RemoveIngredient("flow-controller", "glass", 1, 1)
+    rm.RemoveIngredient("flow-controller", "glass", 1)
     --it's in the recipe now, so can be removed from some things that use flow controllers
-    rm.RemoveIngredient("kr-electrolysis-plant", "automation-core", 3, 3)
-    rm.RemoveIngredient("kr-filtration-plant", "automation-core", 3, 3)
-    rm.RemoveIngredient("chemical-plant", "automation-core", 3, 3)
-    rm.RemoveIngredient("pumpjack", "automation-core", 3, 3)
-    rm.RemoveIngredient("oil-refinery", "automation-core", 5, 5)
+    rm.RemoveIngredient("kr-electrolysis-plant", "automation-core", 3)
+    rm.RemoveIngredient("kr-filtration-plant", "automation-core", 3)
+    rm.RemoveIngredient("chemical-plant", "automation-core", 3)
+    rm.RemoveIngredient("pumpjack", "automation-core", 3)
+    rm.RemoveIngredient("oil-refinery", "automation-core", 5)
   end
 end
 
@@ -53,7 +53,7 @@ if mods["Krastorio2"] then
   end
 
   if mods["aai-industry"] then
-    rm.RemoveIngredient("stack-inserter", "electronic-circuit", 2, 2)
+    rm.RemoveIngredient("stack-inserter", "electronic-circuit", 2)
   end
 
   if rm.CheckIngredient("logistic-science-pack", "iron-gear-wheel") then
@@ -66,22 +66,22 @@ if mods["Krastorio2"] then
 
   if not mods["BrassTacks"] then
     data.raw.recipe["chemical-science-pack"].category = data.raw.recipe["logistic-science-pack"].category
-    rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50, 50)
-    rm.ReplaceIngredient("chemical-science-pack", "glass", "battery", 5, 5)
+    rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50)
+    rm.ReplaceIngredient("chemical-science-pack", "glass", "battery", 5)
     if not mods["space-exploration"] then
       if rm.CheckIngredient("utility-science-pack", "rocket-fuel") then
-        rm.AddIngredient("utility-science-pack", "complex-joint", 5, 5)
+        rm.AddIngredient("utility-science-pack", "complex-joint", 5)
       end
     end
   end
 
   if parts.nitinol then
-    rm.RemoveIngredient("kr-advanced-transport-belt", "titanium-plate", 1, 1)
+    rm.RemoveIngredient("kr-advanced-transport-belt", "titanium-plate", 1)
   end
 end
 
 if parts.experimental and parts.brassExperiment then
-  rm.RemoveIngredient("assembling-machine-3", "steel-plate", 8, 16)
+  rm.RemoveIngredient("assembling-machine-3", "steel-plate", 8)
 end
 
 if not mods["BrassTacks"] then
@@ -137,5 +137,5 @@ cu.moveItem("electric-engine-unit", "engine-components", "f")
 cu.moveItem("flying-robot-frame", "engine-components", "g")
 
 if rm.CheckIngredient("cooling-fan", "temperature-sensor") then
-  rm.RemoveIngredient("mainboard-holmium", "temperature-sensor", 99999, 99999)
+  rm.RemoveIngredient("mainboard-holmium", "temperature-sensor", 99999)
 end

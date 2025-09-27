@@ -10,14 +10,14 @@ if not mods["galdocs-manufacturing"] then
     {
       type = "item",
       name = "nickel-ore",
-      icon = "__IfNickel__/graphics/icons/nickel-ore.png",
+      icon = "__IfNickel-Updated__/graphics/icons/nickel-ore.png",
       icon_size = 64, icon_mipmaps = 4,
       pictures =
           {
-            { size = 64, filename = "__IfNickel__/graphics/icons/nickel-ore.png",   scale = 0.25, mipmap_count = 4 },
-            { size = 64, filename = "__IfNickel__/graphics/icons/nickel-ore-1.png", scale = 0.25, mipmap_count = 4 },
-            { size = 64, filename = "__IfNickel__/graphics/icons/nickel-ore-2.png", scale = 0.25, mipmap_count = 4 },
-            { size = 64, filename = "__IfNickel__/graphics/icons/nickel-ore-3.png", scale = 0.25, mipmap_count = 4 }
+            { size = 64, filename = "__IfNickel-Updated__/graphics/icons/nickel-ore.png",   scale = 0.25, mipmap_count = 4 },
+            { size = 64, filename = "__IfNickel-Updated__/graphics/icons/nickel-ore-1.png", scale = 0.25, mipmap_count = 4 },
+            { size = 64, filename = "__IfNickel-Updated__/graphics/icons/nickel-ore-2.png", scale = 0.25, mipmap_count = 4 },
+            { size = 64, filename = "__IfNickel-Updated__/graphics/icons/nickel-ore-3.png", scale = 0.25, mipmap_count = 4 }
           },
       subgroup = "raw-resource",
       --copper = e
@@ -27,7 +27,7 @@ if not mods["galdocs-manufacturing"] then
     {
       type = "item",
       name = "nickel-plate",
-      icon = "__IfNickel__/graphics/icons/nickel-plate.png",
+      icon = "__IfNickel-Updated__/graphics/icons/nickel-plate.png",
       icon_size = 64,
       subgroup = "raw-material",
       --copper = c
@@ -37,7 +37,7 @@ if not mods["galdocs-manufacturing"] then
     {
       type = "item",
       name = "invar-plate",
-      icon = "__IfNickel__/graphics/icons/invar-plate.png",
+      icon = "__IfNickel-Updated__/graphics/icons/invar-plate.png",
       icon_size = 64,
       subgroup = "raw-material",
       --steel=d
@@ -51,7 +51,7 @@ data:extend({
   {
     type = "item",
     name = "invar-valve",
-    icon = "__IfNickel__/graphics/icons/invar-valve.png",
+    icon = "__IfNickel-Updated__/graphics/icons/invar-valve.png",
     icon_size = 64,
     subgroup = "intermediate-product",
     order = "cf",
@@ -82,7 +82,7 @@ if not mods["aai-industry"] then
     {
       type = "item",
       name = "motor",
-      icon = "__IfNickel__/graphics/icons/motor.png",
+      icon = "__IfNickel-Updated__/graphics/icons/motor.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       localised_name = {"item-name.motor-nickel"}, --different locale key to avoid overriding "single cylinder engine" text
@@ -98,7 +98,7 @@ if not (parts.foundryEnabled or mods["galdocs-manufacturing"]) then
     {
       type = "item",
       name = "invar-precursor",
-      icon = "__IfNickel__/graphics/icons/invar-precursor.png",
+      icon = "__IfNickel-Updated__/graphics/icons/invar-precursor.png",
       icon_size = 64,
       subgroup = "raw-resource",
       order = "fa",
@@ -113,7 +113,7 @@ if parts.experimental then
     {
       type = "item",
       name = "motorized-articulator",
-      icon = "__IfNickel__/graphics/icons/motorized-articulator.png",
+      icon = "__IfNickel-Updated__/graphics/icons/motorized-articulator.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "gb",
@@ -122,7 +122,7 @@ if parts.experimental then
     {
       type = "item",
       name = "flow-controller",
-      icon = "__IfNickel__/graphics/icons/flow-controller.png",
+      icon = "__IfNickel-Updated__/graphics/icons/flow-controller.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "cg",
@@ -131,7 +131,7 @@ if parts.experimental then
     {
       type = "item",
       name = "cooling-fan",
-      icon = "__IfNickel__/graphics/icons/cooling-fan.png",
+      icon = "__IfNickel-Updated__/graphics/icons/cooling-fan.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "ch",
@@ -140,7 +140,7 @@ if parts.experimental then
     {
       type = "item",
       name = "gimbaled-thruster",
-      icon = "__IfNickel__/graphics/icons/gimbaled-thruster.png",
+      icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "na",
@@ -153,7 +153,7 @@ if parts.experimental then
       {
         type = "item",
         name = "gimbaled-thruster-packed",
-        icon = "__IfNickel__/graphics/icons/gimbaled-thruster-packed.png",
+        icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster-packed.png",
         icon_size = 64,
         subgroup = "ll-packed-rocket-ingredients",
         order = "z",
@@ -167,7 +167,7 @@ if parts.experimental then
       {
         type = "item",
         name = "machining-tool",
-        icon = "__IfNickel__/graphics/icons/machining-tool.png",
+        icon = "__IfNickel-Updated__/graphics/icons/machining-tool.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "nb",
@@ -176,7 +176,7 @@ if parts.experimental then
       {
         type = "item",
         name = "advanced-machining-tool",
-        icon = "__IfNickel__/graphics/icons/advanced-machining-tool.png",
+        icon = "__IfNickel-Updated__/graphics/icons/advanced-machining-tool.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "nc",
@@ -191,7 +191,7 @@ if mods["Krastorio2"] then
     {
       type = "item",
       name = "enriched-nickel",
-      icon = "__IfNickel__/graphics/icons/enriched-nickel.png",
+      icon = "__IfNickel-Updated__/graphics/icons/enriched-nickel.png",
       icon_size = 64,
       subgroup = "raw-material",
       order = "f3",
@@ -211,7 +211,7 @@ if mods["space-exploration"] then
     {
       type = "item",
       name = "nickel-ingot",
-      icon = "__IfNickel__/graphics/icons/nickel-ingot.png",
+      icon = "__IfNickel-Updated__/graphics/icons/nickel-ingot.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "???",
@@ -220,7 +220,7 @@ if mods["space-exploration"] then
     {
       type = "item",
       name = "invar-ingot",
-      icon = "__IfNickel__/graphics/icons/invar-ingot.png",
+      icon = "__IfNickel-Updated__/graphics/icons/invar-ingot.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "???",
@@ -229,7 +229,7 @@ if mods["space-exploration"] then
     {
       type = "fluid",
       name = "molten-nickel",
-      icon = "__IfNickel__/graphics/icons/molten-nickel.png",
+      icon = "__IfNickel-Updated__/graphics/icons/molten-nickel.png",
       icon_size = 64,
       subgroup = "fluid",
       order = "a[molten]-b3",
@@ -246,7 +246,7 @@ if mods["space-exploration"] then
       {
         type = "item",
         name = "advanced-flow-controller",
-        icon = "__IfNickel__/graphics/icons/advanced-flow-controller.png",
+        icon = "__IfNickel-Updated__/graphics/icons/advanced-flow-controller.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "cga",
@@ -255,7 +255,7 @@ if mods["space-exploration"] then
       {
         type = "item",
         name = "nickel-electromagnet",
-        icon = "__IfNickel__/graphics/icons/nickel-electromagnet.png",
+        icon = "__IfNickel-Updated__/graphics/icons/nickel-electromagnet.png",
         icon_size = 64,
         subgroup = "electronic",
         order = "b-02-b",
@@ -270,7 +270,7 @@ if parts.nitinol then
     {
       type = "item",
       name = "nitinol-plate",
-      icon = "__IfNickel__/graphics/icons/nitinol-plate.png",
+      icon = "__IfNickel-Updated__/graphics/icons/nitinol-plate.png",
       icon_size = 64,
       subgroup = "intermediate-product",
       order = "???",
@@ -279,7 +279,7 @@ if parts.nitinol then
     {
       type = "item",
       name = "nitinol-mesh",
-      icon = "__IfNickel__/graphics/icons/nitinol-mesh.png",
+      icon = "__IfNickel-Updated__/graphics/icons/nitinol-mesh.png",
       icon_size = 64,
       subgroup = "advanced-assembling",
       order = "g",
@@ -288,7 +288,7 @@ if parts.nitinol then
     {
       type = "item",
       name = "self-regulating-valve",
-      icon = "__IfNickel__/graphics/icons/self-regulating-valve.png",
+      icon = "__IfNickel-Updated__/graphics/icons/self-regulating-valve.png",
       icon_size = 64,
       subgroup = "advanced-assembling",
       order = "h",
@@ -300,7 +300,7 @@ if parts.nitinol then
       {
         type = "item",
         name = "nitinol-precursor",
-        icon = "__IfNickel__/graphics/icons/nitinol-precursor.png",
+        icon = "__IfNickel-Updated__/graphics/icons/nitinol-precursor.png",
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "???",
@@ -315,7 +315,7 @@ if mods["FreightForwarding"] then
     {
       type = "item",
       name = "meteoric-nodule",
-      icon = "__IfNickel__/graphics/icons/meteoric-nodule.png",
+      icon = "__IfNickel-Updated__/graphics/icons/meteoric-nodule.png",
       icon_size = 64,
       subgroup = "raw-resource",
       order = "w[nodule]-e[meteoric]",
@@ -330,7 +330,7 @@ if mods["248k"] then
     {
       type = "fluid",
       name = "248k-nickel-atom",
-      icon = "__IfNickel__/graphics/icons/248k-nickel-atom.png",
+      icon = "__IfNickel-Updated__/graphics/icons/248k-nickel-atom.png",
       icon_size = 64,
       subgroup = "fu_item_subgroup_f",
       order = "a-a",
@@ -344,7 +344,7 @@ if mods["248k"] then
       name = "248k-nickel-atom-hot",
       icons = {
           {
-            icon = "__IfNickel__/graphics/icons/248k-nickel-atom.png",
+            icon = "__IfNickel-Updated__/graphics/icons/248k-nickel-atom.png",
             icon_size = 64,
           },
           {

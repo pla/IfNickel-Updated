@@ -50,5 +50,5 @@ local function createOreParticle(ore, path, variants)
 end
 
 data:extend({
-  createOreParticle("nickel-ore", "__IfNickel__/graphics/ore", 4)
+  createOreParticle("nickel-ore", "__IfNickel-Updated__/graphics/ore", 4)
 })

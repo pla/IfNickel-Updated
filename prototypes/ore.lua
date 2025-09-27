@@ -2,15 +2,29 @@ local resource_autoplace = require("resource-autoplace")
 
 if mods["galdocs-manufacturing"] then return end
 
+
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["nickel-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["nickel-ore"] = {}
+resource_autoplace.initialize_patch_set("nickel-ore", true)
+
 data:extend({
+  {
+    type = "autoplace-control",
+    category = "resource",
+    name = "nickel-ore",
+    localised_name = {"", (mods["LunarLandings"] and "[virtual-signal=ll-nauvis] " or "") .. "[entity=nickel-ore] ", {"entity-name.nickel-ore"}},
+    richness = true,
+    order = "b-db"
+  },
   {
     type = "resource",
     name = "nickel-ore",
-    icon = "__IfNickel__/graphics/icons/nickel-ore.png",
+    icon = "__IfNickel-Updated__/graphics/icons/nickel-ore.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral"},
     order="a-b-y",
+    map_color = {0.1, 0.1, 0.8},
     tree_removal_probability = 0.8,
     tree_removal_max_distance = 32 * 32,
     minable =
@@ -39,14 +53,14 @@ data:extend({
     {
       sheet =
       {
-        filename = "__IfNickel__/graphics/ore/nickel-ore.png",
+        filename = "__IfNickel-Updated__/graphics/ore/nickel-ore.png",
         priority = "extra-high",
         size = 64,
         frame_count = 8,
         variation_count = 8,
         hr_version =
         {
-          filename = "__IfNickel__/graphics/ore/hr-nickel-ore.png",
+          filename = "__IfNickel-Updated__/graphics/ore/hr-nickel-ore.png",
           priority = "extra-high",
           size = 128,
           frame_count = 8,
@@ -55,19 +69,6 @@ data:extend({
         }
       }
     },
-    map_color = {0.1, 0.1, 0.8},
     mining_visualisation_tint = {r=0.1, g=0.1, b=0.8}
-  },
-  {
-    type = "autoplace-control",
-    category = "resource",
-    name = "nickel-ore",
-    localised_name = {"", (mods["LunarLandings"] and "[virtual-signal=ll-nauvis] " or "") .. "[entity=nickel-ore] ", {"entity-name.nickel-ore"}},
-    richness = true,
-    order = "b-db"
-  },
-  {
-    type = "noise-layer",
-    name = "nickel-ore"
   }
 })

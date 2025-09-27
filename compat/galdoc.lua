@@ -24,26 +24,26 @@ rm.ReplaceProportional("gm-spooler-recipe", "copper-cable", parts.motor, 0.01)
 rm.ReplaceProportional("gm-threader-recipe", "copper-cable", parts.motor, 0.01)
 rm.ReplaceProportional("gm-welder-recipe", "copper-cable", parts.motor, 0.01)
 
-rm.RemoveIngredient("fast-inserter", "copper-cable", 99999, 99999)
-rm.RemoveIngredient("stack-inserter", "copper-cable", 99999, 99999)
-rm.RemoveIngredient("assembling-machine-1", "copper-cable", 99999, 99999)
-rm.RemoveIngredient("assembling-machine-2", "copper-cable", 99999, 99999)
+rm.RemoveIngredient("fast-inserter", "copper-cable", 99999)
+rm.RemoveIngredient("stack-inserter", "copper-cable", 99999)
+rm.RemoveIngredient("assembling-machine-1", "copper-cable", 99999)
+rm.RemoveIngredient("assembling-machine-2", "copper-cable", 99999)
 
 --valve
 rm.ReplaceProportional("invar-valve", "invar-plate", "thermally-stable-shafting-machined-part", 1)
 rm.ReplaceProportional("invar-valve", "copper-plate-stock", "ductile-paneling-machined-part", 1)
 rm.ReplaceProportional("invar-valve", "basic-piping-machined-part", "corrosion-resistant-piping-machined-part", 1)
 rm.ReplaceProportional("invar-valve", "basic-fine-piping-machined-part", "corrosion-resistant-piping-machined-part", 1)
-rm.AddIngredient("invar-valve", "high-tensile-bolts-machined-part", 1, 1)
+rm.AddIngredient("invar-valve", "high-tensile-bolts-machined-part", 1)
 
 --valves already added
-rm.RemoveIngredient("assembling-machine-2", "corrosion-resistant-piping-machined-part", 99999, 99999)
-rm.RemoveIngredient("assembling-machine-2", "corrosion-resistant-fine-piping-machined-part", 99999, 99999)
-rm.RemoveIngredient("assembling-machine-3", "corrosion-resistant-piping-machined-part", 99999, 99999)
-rm.RemoveIngredient("assembling-machine-3", "corrosion-resistant-fine-piping-machined-part", 99999, 99999)
+rm.RemoveIngredient("assembling-machine-2", "corrosion-resistant-piping-machined-part", 99999)
+rm.RemoveIngredient("assembling-machine-2", "corrosion-resistant-fine-piping-machined-part", 99999)
+rm.RemoveIngredient("assembling-machine-3", "corrosion-resistant-piping-machined-part", 99999)
+rm.RemoveIngredient("assembling-machine-3", "corrosion-resistant-fine-piping-machined-part", 99999)
 
-rm.RemoveIngredient("oil-refinery", "thermally-stable-shafting-machined-part", 99999, 99999)
-rm.RemoveIngredient("chemical-plant", "thermally-stable-shafting-machined-part", 99999, 99999)
+rm.RemoveIngredient("oil-refinery", "thermally-stable-shafting-machined-part", 99999)
+rm.RemoveIngredient("chemical-plant", "thermally-stable-shafting-machined-part", 99999)
 
 if not parts.experimental then return end
 
@@ -53,8 +53,8 @@ if galdoc_advanced then
 else
   rm.ReplaceProportional("motorized-articulator", "basic-gearing-machined-part", "heavy-load-bearing-shafting-machined-part", 1)
 end
-rm.AddIngredient("motorized-articulator", "high-tensile-bolts-machined-part", 1, 1)
-rm.RemoveIngredient("stack-inserter", "heavy-load-bearing-shafting", 99999, 99999)
+rm.AddIngredient("motorized-articulator", "high-tensile-bolts-machined-part", 1)
+rm.RemoveIngredient("stack-inserter", "heavy-load-bearing-shafting", 99999)
 
 --thruster
-rm.AddIngredient("gimbaled-thruster", "thermally-stable-shielding-machined-part", 1, 1)
+rm.AddIngredient("gimbaled-thruster", "thermally-stable-shielding-machined-part", 1)

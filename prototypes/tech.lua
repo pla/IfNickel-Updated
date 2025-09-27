@@ -6,7 +6,7 @@ if not mods["galdocs-manufacturing"] then
     {
       type = "technology",
       name = "invar-processing",
-      icon = "__IfNickel__/graphics/tech/invar-processing.png",
+      icon = "__IfNickel-Updated__/graphics/tech/invar-processing.png",
       icon_size = 256, icon_mipmaps = 4,
       effects =
       {
@@ -39,7 +39,7 @@ data:extend({
   {
     type = "technology",
     name = "valves",
-    icon = "__IfNickel__/graphics/tech/valves.png",
+    icon = "__IfNickel-Updated__/graphics/tech/valves.png",
     icon_size = 256, icon_mipmaps = 4,
     effects =
     {
@@ -72,7 +72,7 @@ if parts.experimental then
     {
       type = "technology",
       name = "injection-molding",
-      icon = "__IfNickel__/graphics/tech/injection-molding.png",
+      icon = "__IfNickel-Updated__/graphics/tech/injection-molding.png",
       icon_size = 256,
       effects =
       {
@@ -98,7 +98,7 @@ if parts.experimental then
     {
       type = "technology",
       name = "gimbaled-thruster",
-      icon = "__IfNickel__/graphics/tech/gimbaled-thruster.png",
+      icon = "__IfNickel-Updated__/graphics/tech/gimbaled-thruster.png",
       icon_size = 256,
       effects =
       {
@@ -128,7 +128,7 @@ if parts.experimental then
       {
         type = "technology",
         name = "mechanical-engineering",
-        icon = "__IfNickel__/graphics/tech/mechanical-engineering.png",
+        icon = "__IfNickel-Updated__/graphics/tech/mechanical-engineering.png",
         icon_size = 256,
         effects =
         {
@@ -159,7 +159,7 @@ if parts.experimental then
         name = "machine-homeostasis",
         icons = {
           {
-            icon = "__IfNickel__/graphics/tech/advanced-flow-controller.png",
+            icon = "__IfNickel-Updated__/graphics/tech/advanced-flow-controller.png",
             icon_size = 256
           },
           {
@@ -198,7 +198,7 @@ if parts.experimental then
       {
         type = "technology",
         name = "advanced-flow-controller",
-        icon = "__IfNickel__/graphics/tech/advanced-flow-controller.png",
+        icon = "__IfNickel-Updated__/graphics/tech/advanced-flow-controller.png",
         icon_size = 256,
         effects =
         {
@@ -224,7 +224,7 @@ if parts.experimental then
       {
         type = "technology",
         name = "nickel-electromagnet",
-        icon = "__IfNickel__/graphics/tech/nickel-electromagnet.png",
+        icon = "__IfNickel-Updated__/graphics/tech/nickel-electromagnet.png",
         icon_size = 256,
         effects =
         {
@@ -263,7 +263,7 @@ if mods["Krastorio2"] then
           icon_mipmaps = 4,
         },
         {
-          icon = "__IfNickel__/graphics/icons/nickel-ore.png",
+          icon = "__IfNickel-Updated__/graphics/icons/nickel-ore.png",
           icon_size = 64,
           icon_mipmaps = 4,
           scale = 2
@@ -292,7 +292,7 @@ if parts.nitinol then
       name = "nitinol-processing",
       icons = {
         {
-          icon = "__IfNickel__/graphics/tech/nitinol-processing.png",
+          icon = "__IfNickel-Updated__/graphics/tech/nitinol-processing.png",
           icon_size = 256
         }
       },
@@ -331,7 +331,7 @@ if parts.nitinol then
       name = "space-nitinol-processing",
       icons = {
         {
-          icon = "__IfNickel__/graphics/tech/nitinol-processing.png",
+          icon = "__IfNickel-Updated__/graphics/tech/nitinol-processing.png",
           icon_size = 256
         },
         {
@@ -369,7 +369,7 @@ if parts.nitinol then
       name = "nitinol-mesh-beryllium",
       icons = {
         {
-          icon = "__IfNickel__/graphics/tech/nitinol-processing.png",
+          icon = "__IfNickel-Updated__/graphics/tech/nitinol-processing.png",
           icon_size = 256
         },
         {
@@ -406,7 +406,7 @@ if mods["248k"] then
     {
       type = "technology",
       name = "nickel-fusion-processing",
-      icon = "__IfNickel__/graphics/icons/stacking/nickel-plate-stacked.png",
+      icon = "__IfNickel-Updated__/graphics/icons/stacking/nickel-plate-stacked.png",
       icon_size = 64,
       effects = {
         {
