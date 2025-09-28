@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025-09-27
+  Changes:
+    - Updated to 2.0
+  Bugfixes:
+    - Fixes to incorrect technologies being used when setting unlock recipes
+    - Fixed incompat issue with BrassTacks
+    - K2 Compat updated
+---------------------------------------------------------------------------------------------------
 Version: 1.1.3
   Bugfixes:
     - Fixed a startup error with LL due to a changed internal name.
