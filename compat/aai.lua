@@ -372,7 +372,7 @@ if mods["space-exploration"] then
       category = "hard-recycling",
       energy_required = 1,
       ingredients = {{type="item", name="nickel-ore", amount=50}},
-      result = "landfill",
+      results = {{type="item", name="landfill", amount=1}},
       order = "z-b-nickel-ore",
       enabled = false
     }
