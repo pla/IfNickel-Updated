@@ -15,7 +15,7 @@ if not mods["galdocs-manufacturing"] then
           recipe = "invar-plate"
         }
       },
-      prerequisites = {not (mods["Krastorio2"] or mods["MoreScience"]) and "logistic-science-pack" or nil},
+      prerequisites = tf.compilePrereqs{not (mods["Krastorio2"] or mods["MoreScience"]) and "logistic-science-pack" or nil},
       unit =
       {
         count = (mods["Krastorio2"] or mods["MoreScience"]) and 50 or 100,
@@ -52,7 +52,7 @@ data:extend({
         recipe = "flow-controller"
       } or nil
     },
-    prerequisites = {parts.invartech, parts.experimental and "electronics" or nil},
+    prerequisites = tf.compilePrereqs{parts.invartech, parts.experimental and "electronics" or nil},
     unit =
     {
       count = 50,
