@@ -271,7 +271,7 @@ if mods["space-exploration"] then
       add_catalyst("se-radiating-space-coolant-normal", "flow-controller", 1, 0.005, "se-scrap", 10)
       add_catalyst("se-radiating-space-coolant-fast", "flow-controller", 1, 0.0005, "se-scrap", 10)
       data.raw.recipe["se-radiating-space-coolant-slow"].allow_decomposition = false
-      data.raw.recipe["se-radiating-space-coolant-normal"].allow_decomposition = false
+      data.raw.recipe["se-space-coolant-warm"].allow_decomposition = false
       data.raw.recipe["se-radiating-space-coolant-fast"].allow_decomposition = false
 
       add_catalyst("se-space-coolant-cold", "advanced-flow-controller", 1, 0.005, "se-scrap", 30)
