@@ -463,7 +463,7 @@ if mods["LunarLandings"] then
     rm.AddIngredient("ll-oxygen-diffuser", "invar-valve", 5)
   end
 
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     rm.AddIngredient("ll-core-extractor", "electric-engine-unit", 5)
     rm.AddIngredient("ll-low-grav-assembling-machine", "electric-engine-unit", 2)
   end

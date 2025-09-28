@@ -1,6 +1,6 @@
 local parts = {}
 parts.experimental = settings.startup["ifnickel-experimental-intermediates"].value
-parts.zinc = mods["BrassTacks"]
+parts.zinc = mods["BrassTacks-Updated"]
 parts.steelValve = settings.startup["ifnickel-steel-valve"].value
 if parts.zinc then
   parts.brassExperiment = settings.startup["brasstacks-experimental-intermediates"].value

@@ -17,7 +17,7 @@ if mods["advanced-chemical-plant"] and not mods["Krastorio2"] then
       rm.AddIngredient("kr-advanced-chemical-plant", "invar-valve", 32)
     end
   end
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     rm.AddIngredient("kr-advanced-chemical-plant", "electric-engine-unit", 4) --nobody can escape my insistence on shoving this item in every high end recipe. nobody!
   end
 end

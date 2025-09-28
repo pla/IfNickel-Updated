@@ -51,7 +51,7 @@ if mods["Krastorio2"] then
     end
   end
 
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     data.raw.recipe["chemical-science-pack"].category = data.raw.recipe["logistic-science-pack"].category
     rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50)
     rm.ReplaceIngredient("chemical-science-pack", "glass", "battery", 5)
@@ -71,7 +71,7 @@ if parts.experimental and parts.brassExperiment then
   rm.RemoveIngredient("assembling-machine-3", "steel-plate", 8)
 end
 
-if not mods["BrassTacks"] then
+if not mods["BrassTacks-Updated"] then
   if mods["Krastorio2"] or parts.experimental then
     cu.moveItem("articulated-mechanism", "articulated-components", "a")
     cu.moveItem("inserter-parts", "articulated-components", "b")
@@ -116,7 +116,7 @@ cu.moveItem("electric-motor", "engine-components", "b")
 cu.moveItem("electric-motor-silver", "engine-components", "ba")
 cu.moveItem("spark-plug", "engine-components", "c")
 cu.moveRecipe("spark-plug", "engine-components", "c")
-if (mods["BrassTacks"] and not parts.experimental) or not mods["BrassTacks"] then
+if (mods["BrassTacks-Updated"] and not parts.experimental) or not mods["BrassTacks-Updated"] then
   cu.moveItem("drive-belt", "engine-components", "d")
 end
 cu.moveItem("engine-unit", "engine-components", "e")
