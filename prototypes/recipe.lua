@@ -267,7 +267,7 @@ if parts.experimental then
         enabled = false,
         ingredients = {{type="item", name="flow-controller", amount=6}, parts.preferred({"self-regulating-valve", "invar-valve"}, {2, 2}), {type="item", name="advanced-circuit", amount=1}, 
           parts.preferred({"kr-steel-pipe", "pipe"}, {12, 30}), {type="item", name="se-vitamelange-bloom", amount=5}},
-        results = {{type="item", name="advanced-flow-controller", 3}},
+        results = {{type="item", name="advanced-flow-controller", amount=3}},
         main_product = "advanced-flow-controller"
       }
     })
