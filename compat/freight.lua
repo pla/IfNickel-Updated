@@ -14,9 +14,9 @@ if mods["cargo-ships"] then
   end
 
   --orc code
-  if rm.CheckIngredient("oil_rig", "steel-beam") then
-    rm.RemoveIngredient("oil_rig", "steel-beam", 30)
-    rm.AddIngredient("oil_rig", "steel-beam", 30)
+  if rm.CheckIngredient("oil_rig", "kr-steel-beam") then
+    rm.RemoveIngredient("oil_rig", "kr-steel-beam", 30)
+    rm.AddIngredient("oil_rig", "kr-steel-beam", 30)
   end
 end
 
