@@ -10,10 +10,10 @@ if mods["space-exploration"] then
     else
       rm.AddIngredient("se-processing-unit-holmium", "cooling-fan", 1)
     end
+    tf.addPrereq("rocket-silo", "gimbaled-thruster")
   end
 
   rm.RemoveProduct("se-core-fragment-omni", "nickel-ore", 4)
-  tf.addPrereq("rocket-silo", "gimbaled-thruster")
 end
 
 if rm.CheckIngredient("flow-controller", "automation-core") then
