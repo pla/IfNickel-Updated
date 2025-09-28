@@ -165,7 +165,7 @@ if mods["space-exploration"] then
       rm.RemoveIngredient("se-condenser-turbine", "titanium-palladium-flange", 99999)
 
       rm.ReplaceProportional("se-cargo-rocket-cargo-pod", "steel-plate", "nitinol-mesh", 0.5)
-      if (mods["Krastorio2"] or mods["ThemTharHills"]) or not data.raw.item["titanium-palladium-flange"] then
+      if (mods["Krastorio2"] or mods["ThemTharHills-Updated"]) or not data.raw.item["titanium-palladium-flange"] then
         --K2 allows palladium from rare metal ore, TTH allows some pall/plat ore on nauvis from byproducts.
         rm.ReplaceProportional("se-cargo-rocket-fuel-tank", "pipe", "self-regulating-valve", 0.5)
       end

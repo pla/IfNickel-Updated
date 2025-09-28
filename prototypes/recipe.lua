@@ -545,7 +545,7 @@ if parts.nitinol then
       }
     }
   })
-  if mods["LasingAround"] then
+  if mods["LasingAround-Updated"] then
     data:extend({
       {
         type = "recipe",
@@ -557,7 +557,7 @@ if parts.nitinol then
             icon_size = 64
           },
           {
-            icon = "__LasingAround__/graphics/icons/helium.png",
+            icon = "__LasingAround-Updated__/graphics/icons/helium.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}

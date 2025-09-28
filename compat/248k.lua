@@ -17,7 +17,7 @@ if mods["248k"] then
   rm.ReplaceIngredient("el_burner_recipe", "electronic-circuit", parts.motor, 10)
   rm.RemoveIngredient("el_burner_kerosene_recipe", "pipe", 10)
   rm.AddIngredient("el_burner_kerosene_recipe", "invar-valve", 5)
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     rm.ReplaceProportional("el_burner_kerosene_recipe", "pipe", "engine-unit", 0.5)
   end
   rm.RemoveIngredient("fu_burner_recipe", "pipe", 10)
@@ -58,7 +58,7 @@ if mods["248k"] then
     rm.AddIngredient("fi_refinery_recipe", "invar-valve", 20)
   end
 
-  if (mods["aai-industry"] or mods["ThemTharHills"]) and not mods["BrassTacks"] then
+  if (mods["aai-industry"] or mods["ThemTharHills-Updated"]) and not mods["BrassTacks-Updated"] then
     rm.ReplaceProportional("fi_crusher_recipe", "engine-unit", "electric-engine-unit", 0.67)
     rm.ReplaceProportional("fi_fiberer_recipe", "engine-unit", "electric-engine-unit", 0.67)
     rm.ReplaceProportional("fi_compound_machine_recipe", "engine-unit", "electric-engine-unit", 0.67)

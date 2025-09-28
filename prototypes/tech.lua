@@ -341,13 +341,13 @@ if parts.nitinol then
           shift = {-64, -64}
         }
       },
-      localised_description = mods["LasingAround"] and {"technology-description.space-nitinol-processing-helium"} or {"technology-description.space-nitinol-processing"},
+      localised_description = mods["LasingAround-Updated"] and {"technology-description.space-nitinol-processing-helium"} or {"technology-description.space-nitinol-processing"},
       effects = {
         {
           type = "unlock-recipe",
           recipe = "nitinol-plate-space"
         },
-        mods["LasingAround"] and {
+        mods["LasingAround-Updated"] and {
           type = "unlock-recipe",
           recipe = "nitinol-plate-helium"
         } or nil

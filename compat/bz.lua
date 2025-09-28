@@ -50,7 +50,7 @@ if mods["bzgold"] then
     rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999)
   end end
 
-  if mods["ThemTharHills"] or not mods["space-exploration"] then
+  if mods["ThemTharHills-Updated"] or not mods["space-exploration"] then
     --TTH handles allowing small amounts of gold/plat/pall on nauvis
     if parts.experimental then
       if rm.CheckIngredient("mainboard", "temperature-sensor") then
@@ -72,7 +72,7 @@ if mods["bzgold"] then
   if rm.CheckIngredient("rocket-control-unit", "temperature-sensor") and data.raw.item["gimbaled-thruster"] then
     --rcu is getting a bit overcrowded and the temp sensor should be in the part of the rocket that might plausibly overheat anyway
     rm.RemoveIngredient("rocket-control-unit", "temperature-sensor", 99999)
-    if mods["space-exploration"] and mods["ThemTharHills"] then
+    if mods["space-exploration"] and mods["ThemTharHills-Updated"] then
       rm.AddIngredient("gimbaled-thruster", "temperature-sensor", 1)
     else if not mods["space-exploration"] then
       rm.AddIngredient("gimbaled-thruster", "temperature-sensor", 2)
