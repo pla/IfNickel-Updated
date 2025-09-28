@@ -352,7 +352,6 @@ if parts.aai then
   end
 elseif not mods["galdocs-manufacturing"] then
   --aaii's recipe for the eeu uses normal motors, so this is superfluous
-  rm.Expensify("electric-engine-unit") --5 is good for normal, on expensive that's barely more than a motor
   rm.AddIngredient("electric-engine-unit", "nickel-plate", 5)
 end
 
