@@ -36,21 +36,8 @@ end
 
 if mods["Krastorio2"] then
   local ing = {}
-  if data.raw.recipe["pumpjack"].normal then
-    ing = data.raw.recipe["pumpjack"].normal.ingredients
-  else
-    ing = data.raw.recipe["pumpjack"].ingredients
-  end
+  ing = data.raw.recipe["pumpjack"].ingredients
   data.raw.recipe["kr-mineral-water-pumpjack"].ingredients = ing
-  if data.raw.recipe["kr-mineral-water-pumpjack"].normal then
-    data.raw.recipe["kr-mineral-water-pumpjack"].normal.ingredients = ing
-  end
-  if data.raw.recipe["pumpjack"].expensive then
-    ing = data.raw.recipe["pumpjack"].expensive.ingredients
-  end
-  if data.raw.recipe["kr-mineral-water-pumpjack"].expensive then
-    data.raw.recipe["kr-mineral-water-pumpjack"].expensive.ingredients = ing
-  end
 
   if mods["aai-industry"] then
     rm.RemoveIngredient("stack-inserter", "electronic-circuit", 2)
@@ -58,9 +45,9 @@ if mods["Krastorio2"] then
 
   if rm.CheckIngredient("logistic-science-pack", "iron-gear-wheel") then
     if mods["aai-industry"] then
-      rm.ReplaceIngredient("logistic-science-pack", "iron-gear-wheel", parts.motor, 5, 5) --AAI motors are more expensive
+      rm.ReplaceIngredient("logistic-science-pack", "iron-gear-wheel", parts.motor, 5) --AAI motors are more expensive
     else
-      rm.AddIngredient("logistic-science-pack", parts.motor, 5, 5) --IN motors are barely more than a vanilla circuit
+      rm.AddIngredient("logistic-science-pack", parts.motor, 5) --IN motors are barely more than a vanilla circuit
     end
   end
 

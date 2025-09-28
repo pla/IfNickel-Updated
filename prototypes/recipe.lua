@@ -312,7 +312,7 @@ if mods["Krastorio2"] then
     		name = "dirty-water-filtration-nickel",
         subgroup = "raw-material",
     		order = "w013[dirty-water-filtration-zinc]",
-    		category = "fluid-filtration",
+    		category = "kr-fluid-filtration",
     		icons =
     		{
     			{
