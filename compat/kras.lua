@@ -37,7 +37,7 @@ if mods["Krastorio2"] then
       rm.AddIngredient("kr-advanced-research-server", "cooling-fan", 20)
       rm.AddIngredient("ai-core", "cooling-fan", 2)
     end
-    tf.addPrereq("advanced-radar", "injection-molding")
+    tf.addPrereq("kr-advanced-radar", "injection-molding")
     rm.AddIngredient("kr-advanced-radar", "cooling-fan", 1)
     rm.AddIngredient("energy-control-unit", "cooling-fan", 2)
     rm.AddIngredient("biusart-lab", "cooling-fan", 5)
@@ -84,7 +84,7 @@ if mods["Krastorio2"] then
 
     rm.AddIngredient("kr-advanced-chemical-plant", "invar-valve", 25)
   end
-  tf.addPrereq("valves", "kr-basic-fluid-handling")
+  tf.addPrereq("valves", "kr-steel-fluid-handling")
   tf.addPrereq("kr-fluids-chemistry", "valves")
   rm.AddIngredient("kr-fluid-burner", "invar-valve", 2)
 

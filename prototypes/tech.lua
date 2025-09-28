@@ -57,7 +57,7 @@ data:extend({
     {
       count = 50,
       ingredients =
-      {
+      tf.compilePrereqs{
         {"automation-science-pack", 1},
         not (mods["Krastorio2"] or mods["MoreScience"]) and {"logistic-science-pack", 1} or nil
       },
@@ -107,12 +107,12 @@ if parts.experimental then
           recipe = "gimbaled-thruster"
         }
       },
-      prerequisites = {(not (mods["space-exploration"] or mods["LunarLandings"])) and "utility-science-pack" or nil, "rocket-fuel"},
+      prerequisites = tf.compilePrereqs{(not (mods["space-exploration"] or mods["LunarLandings"])) and "utility-science-pack" or nil, "rocket-fuel"},
       unit =
       {
         count = 150,
         ingredients =
-        {
+        tf.compilePrereqs{
           {"automation-science-pack", 1},
           {"logistic-science-pack", 1},
           {"chemical-science-pack", 1},

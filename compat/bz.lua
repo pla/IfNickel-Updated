@@ -20,8 +20,8 @@ if mods["bztin"] and parts.experimental then
     if mods["Krastorio2"] or mods["MoreScience"] then
       tf.removeSciencePack("tinned-cable", "logistic-science-pack")
       tf.removePrereq("tinned-cable", "logistic-science-pack")
-      if data.raw.technology["copper-processing"] then
-        tf.addPrereq("tinned-cable", "copper-processing")
+      if data.raw.technology["kr-matter-copper-processing"] then
+        tf.addPrereq("tinned-cable", "kr-matter-copper-processing")
       else
         tf.addPrereq("tinned-cable", "automation")
       end
@@ -54,7 +54,7 @@ if mods["bzgold"] then
     --TTH handles allowing small amounts of gold/plat/pall on nauvis
     if parts.experimental then
       if rm.CheckIngredient("mainboard", "temperature-sensor") then
-        tf.removePrereq("advanced-electronics-2", "temperature-regulation")
+        tf.removePrereq("processing-unit", "temperature-regulation")
         tf.removePrereq("injection-molding", "chemical-science-pack")
         tf.addPrereq("injection-molding", "temperature-regulation")
         rm.RemoveIngredient("mainboard", "temperature-sensor", 99999)

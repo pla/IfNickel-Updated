@@ -4,8 +4,8 @@ local parts = require("variable-parts")
 
 if parts.experimental then
 
-  tf.removePrereq("advanced-electronics-2", "chemical-science-pack")
-  tf.addPrereq("advanced-electronics-2", "injection-molding")
+  tf.removePrereq("processing-unit", "chemical-science-pack")
+  tf.addPrereq("processing-unit", "injection-molding")
 
   if mods["Krastorio2"] then
     --blue circuits produced in pairs
@@ -325,7 +325,7 @@ if not mods["galdocs-manufacturing"] then
 
   tf.removePrereq("military-2", "steel-processing")
   tf.addPrereq("military-2", "invar-processing")
-  tf.addPrereq("gates", "steel-processing")
+  tf.addPrereq("gate", "steel-processing")
 
   rm.ReplaceIngredient("gun-turret", "iron-plate", "nickel-plate", 6)
 end
@@ -412,7 +412,9 @@ end
 
 rm.AddIngredient("transport-belt-beltbox", parts.motor, 1)
 rm.AddIngredient("express-transport-belt-beltbox", "electric-engine-unit", 1)
-tf.addPrereq("deadlock-stacking-3", "electric-engine")
+if deadlock then
+  tf.addPrereq("deadlock-stacking-3", "electric-engine")
+end
 
 if mods["Flow Control"] then
   tf.addPrereq("flow_control_valves_tech", "valves")
