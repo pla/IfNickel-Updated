@@ -84,7 +84,7 @@ if mods["Krastorio2"] then
 
     rm.AddIngredient("kr-advanced-chemical-plant", "invar-valve", 25)
   end
-  tf.addPrereq("valves", "fluid-handling")
+  --tf.addPrereq("valves", mods["aai-industry"] and "basic-fluid-handling" or "fluid-handling")
   tf.addPrereq("kr-fluids-chemistry", "valves")
   rm.AddIngredient("kr-fluid-burner", "invar-valve", 2)
 

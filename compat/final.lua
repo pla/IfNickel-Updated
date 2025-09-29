@@ -55,12 +55,11 @@ if mods["Krastorio2"] then
     data.raw.recipe["chemical-science-pack"].category = data.raw.recipe["logistic-science-pack"].category
     rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50)
     rm.ReplaceIngredient("chemical-science-pack", mods["Krastorio2"] and "kr-glass" or "glass", "battery", 5)
-    if not mods["space-exploration"] then
+  elseif not mods["space-exploration"] then
       if rm.CheckIngredient("utility-science-pack", "rocket-fuel") then
         rm.AddIngredient("utility-science-pack", "complex-joint", 5)
       end
     end
-  end
 
   if parts.nitinol then
     rm.RemoveIngredient("kr-advanced-transport-belt", "titanium-plate", 1)
