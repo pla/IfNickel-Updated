@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.2.1
+Date: 2025-09-27
+  Changes:
+    - Changed major version to 2
+  Bugfixes:
+    - Fixed BrassTacks compatibility using old BrassTacks
+    - Fixed incorrect tech for valves 
+    - Bunch of compatibility fixes for K2 and upcoming BZ. I really do need to rewrite this entire mod...
+    - Adding Updated optional reqs in info
+    - Fixed AAI compatibility
+    - Fixed rare crash when main_product was undefined
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2025-09-27
   Changes:
