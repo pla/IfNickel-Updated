@@ -25,7 +25,7 @@ rm.ReplaceProportional("gm-threader-recipe", "copper-cable", parts.motor, 0.01)
 rm.ReplaceProportional("gm-welder-recipe", "copper-cable", parts.motor, 0.01)
 
 rm.RemoveIngredient("fast-inserter", "copper-cable", 99999)
-rm.RemoveIngredient("stack-inserter", "copper-cable", 99999)
+rm.RemoveIngredient("bulk-inserter", "copper-cable", 99999)
 rm.RemoveIngredient("assembling-machine-1", "copper-cable", 99999)
 rm.RemoveIngredient("assembling-machine-2", "copper-cable", 99999)
 
@@ -54,7 +54,7 @@ else
   rm.ReplaceProportional("motorized-articulator", "basic-gearing-machined-part", "heavy-load-bearing-shafting-machined-part", 1)
 end
 rm.AddIngredient("motorized-articulator", "high-tensile-bolts-machined-part", 1)
-rm.RemoveIngredient("stack-inserter", "heavy-load-bearing-shafting", 99999)
+rm.RemoveIngredient("bulk-inserter", "heavy-load-bearing-shafting", 99999)
 
 --thruster
 rm.AddIngredient("gimbaled-thruster", "thermally-stable-shielding-machined-part", 1)

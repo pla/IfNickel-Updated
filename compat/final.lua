@@ -24,7 +24,7 @@ if rm.CheckIngredient("flow-controller", "automation-core") then
     rm.RemoveIngredient("flow-controller", "automation-core", 1)
   else
     --only want SE glass in the recipe
-    rm.RemoveIngredient("flow-controller", "glass", 1)
+    rm.RemoveIngredient("flow-controller", mods["Krastorio2"] and "kr-glass" or "glass", 1)
     --it's in the recipe now, so can be removed from some things that use flow controllers
     rm.RemoveIngredient("kr-electrolysis-plant", "automation-core", 3)
     rm.RemoveIngredient("kr-filtration-plant", "automation-core", 3)
@@ -40,7 +40,7 @@ if mods["Krastorio2"] then
   data.raw.recipe["kr-mineral-water-pumpjack"].ingredients = ing
 
   if mods["aai-industry"] then
-    rm.RemoveIngredient("stack-inserter", "electronic-circuit", 2)
+    rm.RemoveIngredient("bulk-inserter", "electronic-circuit", 2)
   end
 
   if rm.CheckIngredient("logistic-science-pack", "iron-gear-wheel") then
@@ -54,7 +54,7 @@ if mods["Krastorio2"] then
   if not mods["BrassTacks-Updated"] then
     data.raw.recipe["chemical-science-pack"].category = data.raw.recipe["logistic-science-pack"].category
     rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50)
-    rm.ReplaceIngredient("chemical-science-pack", "glass", "battery", 5)
+    rm.ReplaceIngredient("chemical-science-pack", mods["Krastorio2"] and "kr-glass" or "glass", "battery", 5)
     if not mods["space-exploration"] then
       if rm.CheckIngredient("utility-science-pack", "rocket-fuel") then
         rm.AddIngredient("utility-science-pack", "complex-joint", 5)

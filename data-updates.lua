@@ -59,14 +59,11 @@ if parts.experimental then
   rm.AddIngredient("fast-transport-belt-beltbox", "motorized-articulator", 4)
 
   if mods["Krastorio2"] then
-    rm.AddIngredient("stack-inserter", "motorized-articulator", 2)
+    rm.AddIngredient("bulk-inserter", "motorized-articulator", 2)
   else
-    rm.AddIngredient("stack-inserter", "motorized-articulator", 5)
-    rm.RemoveIngredient("stack-inserter", "iron-gear-wheel", 5)
-    rm.RemoveIngredient("stack-inserter", "electronic-circuit", 5)
-  end
-  if mods["Krastorio2"] and not mods["aai-industry"] then
-    rm.AddIngredient("stack-filter-inserter", "motorized-articulator", 2)
+    rm.AddIngredient("bulk-inserter", "motorized-articulator", 5)
+    rm.RemoveIngredient("bulk-inserter", "iron-gear-wheel", 5)
+    rm.RemoveIngredient("bulk-inserter", "electronic-circuit", 5)
   end
 
   tf.addPrereq("automation-2", "mechanical-engineering")
@@ -174,14 +171,11 @@ if parts.experimental then
   rm.AddIngredient("science-cauldron", "flow-controller", 5)
 else
   if mods["aai-industry"] then
-    rm.AddIngredient("stack-inserter", parts.motor, 3)
+    rm.AddIngredient("bulk-inserter", parts.motor, 3)
   else
-    rm.AddIngredient("stack-inserter", parts.motor, 5)
+    rm.AddIngredient("bulk-inserter", parts.motor, 5)
   end
-  if mods["Krastorio2"] and not mods["aai-industry"] then
-    rm.AddIngredient("stack-filter-inserter", "motor", 5)
-  end
-
+  
   if not parts.aai then
     rm.ReplaceIngredient("gate", "electronic-circuit", parts.motor, 1)
   end

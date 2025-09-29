@@ -20,7 +20,7 @@ data:extend({
     category = "advanced-crafting",
     enabled = false,
     energy_required = 3,
-    ingredients = {{type="item", name="invar-plate", amount=1}, {type="item", name="pipe", amount=2}, parts.preferred({"airtight-seal", "brass-plate", "copper-plate"}, {1, 2, 2})},
+    ingredients = tf.compilePrereqs{{type="item", name="invar-plate", amount=1}, {type="item", name="pipe", amount=2}, parts.preferred({"airtight-seal", "brass-plate", "copper-plate"}, {1, 2, 2})},
     results = {{type="item", name="invar-valve", amount=1}},
   }
 
@@ -108,7 +108,7 @@ if parts.experimental then
       category = "crafting",
       energy_required = 2,
       enabled = false,
-      ingredients = {parts.preferred({"electric-motor", "motor"}, {2, 2}), {type="item", name="electronic-circuit", amount=1}, parts.preferred({"articulated-mechanism", "inserter-parts", "iron-gear-wheel"}, 
+      ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {2, 2}), {type="item", name="electronic-circuit", amount=1}, parts.preferred({"articulated-mechanism", "inserter-parts", "iron-gear-wheel"}, 
         {2, 1, 2}), parts.optionalIngredient("bronze-plate", 2)},
       results = {{type="item", name="motorized-articulator", amount=1}},
     },
@@ -127,7 +127,7 @@ if parts.experimental then
       category = "crafting",
       energy_required = 30,
       enabled = false,
-      ingredients = {{type="item", name="motorized-articulator", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"rocket-engine-nozzle", "se-heat-shielding", "invar-plate"}, {2, 1, 2}), 
+      ingredients = tf.compilePrereqs{{type="item", name="motorized-articulator", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"rocket-engine-nozzle", "se-heat-shielding", "invar-plate"}, {2, 1, 2}), 
         parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4})},
       results = {{type="item", name="gimbaled-thruster", amount=1}},
     },
@@ -137,7 +137,8 @@ if parts.experimental then
       category = "crafting",
       energy_required = 2,
       enabled = false,
-      ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="invar-valve", amount=1}, {type="item", name="electronic-circuit", amount=1}, parts.preferred({"tinned-cable", "glass"}, {2, 1})},
+      ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="invar-valve", amount=1}, {type="item", name="electronic-circuit", amount=1}, 
+        parts.preferred({"tinned-cable", "kr-glass"}, {2, 1})},
       results = {{type="item", name="flow-controller", amount=1}},
     }
   })
@@ -183,7 +184,7 @@ if parts.experimental then
         category = "crafting",
         energy_required = 2,
         enabled = false,
-        ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="motorized-articulator", amount=1}, parts.preferred({"tungsten-carbide", "steel-plate"}, {2, 1})},
+        ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="motorized-articulator", amount=1}, parts.preferred({"tungsten-carbide", "steel-plate"}, {2, 1})},
         results = {{type="item", name="machining-tool", amount=1}},
       },
       {
@@ -192,7 +193,7 @@ if parts.experimental then
         category = "crafting",
         energy_required = 4,
         enabled = false,
-        ingredients = {{type="item", name="machining-tool", amount=1}, parts.optionalIngredient("diamond", 1), parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4}), {type="item", name="speed-module", amount=1}},
+        ingredients = tf.compilePrereqs{{type="item", name="machining-tool", amount=1}, parts.optionalIngredient("diamond", 1), parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4}), {type="item", name="speed-module", amount=1}},
         results = {{type="item", name="advanced-machining-tool", amount=1}},
       }
     })
@@ -216,7 +217,7 @@ if parts.experimental then
         energy_required = 8,
         enabled = false,
         allow_decomposition = false,
-        ingredients = {{type="item", name="flow-controller", amount=2}, {type="item", name="invar-valve", amount=2}, {type="item", name="advanced-circuit", amount=1}, parts.preferred({"kr-steel-pipe", "pipe"}, {4, 10})},
+        ingredients = tf.compilePrereqs{{type="item", name="flow-controller", amount=2}, {type="item", name="invar-valve", amount=2}, {type="item", name="advanced-circuit", amount=1}, parts.preferred({"kr-steel-pipe", "pipe"}, {4, 10})},
         results = {{type="item", name="advanced-flow-controller", amount=1}},
       },
       {
@@ -238,8 +239,8 @@ if parts.experimental then
         energy_required = 9,
         enabled = false,
         allow_decomposition = false,
-        ingredients = {{type="item", name="electric-motor", amount=1}, {type="item", name="invar-valve", amount=3}, {type="item", name="electronic-circuit", amount=1}, {type="item", name="se-vitamelange-bloom", amount=2},
-          parts.preferred({"tinned-cable", "glass"}, {3, 3})},
+        ingredients = tf.compilePrereqs{{type="item", name="electric-motor", amount=1}, {type="item", name="invar-valve", amount=3}, {type="item", name="electronic-circuit", amount=1}, {type="item", name="se-vitamelange-bloom", amount=2},
+          parts.preferred({"tinned-cable", "kr-glass"}, {3, 3})},
         results = {{type="item", name="flow-controller", amount=3}},
         main_product = "flow-controller"
       },
@@ -261,7 +262,7 @@ if parts.experimental then
          },
         energy_required = 30,
         enabled = false,
-        ingredients = {{type="item", name="flow-controller", amount=6}, parts.preferred({"self-regulating-valve", "invar-valve"}, {2, 2}), {type="item", name="advanced-circuit", amount=1}, 
+        ingredients = tf.compilePrereqs{{type="item", name="flow-controller", amount=6}, parts.preferred({"self-regulating-valve", "invar-valve"}, {2, 2}), {type="item", name="advanced-circuit", amount=1}, 
           parts.preferred({"kr-steel-pipe", "pipe"}, {12, 30}), {type="item", name="se-vitamelange-bloom", amount=5}},
         results = {{type="item", name="advanced-flow-controller", amount=3}},
         main_product = "advanced-flow-controller"
@@ -490,7 +491,7 @@ if parts.nitinol then
       name = "self-regulating-valve",
       category = "advanced-crafting",
       energy_required = 8,
-      ingredients = {{type="item", name="nitinol-plate", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"titanium-palladium-flange", "titanium-plate"}, {2, 2})},
+      ingredients = tf.compilePrereqs{{type="item", name="nitinol-plate", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"titanium-palladium-flange", "titanium-plate"}, {2, 2})},
       results = {{type="item", name="self-regulating-valve", amount=2}},
       enabled = false,
     },
@@ -499,7 +500,7 @@ if parts.nitinol then
       name = "nitinol-mesh",
       category = "advanced-crafting",
       energy_required = 8,
-      ingredients = {{type="item", name="nitinol-plate", amount=3}, parts.preferred({"aluminum-2219", "iron-stick"}, {2, 4}), parts.preferred({"carbon-fiber", "plastic-bar"}, {2, 2})},
+      ingredients = tf.compilePrereqs{{type="item", name="nitinol-plate", amount=3}, parts.preferred({"aluminum-2219", "iron-stick"}, {2, 4}), parts.preferred({"carbon-fiber", "plastic-bar"}, {2, 2})},
       results = {{type="item", name="nitinol-mesh", amount=2}},
       enabled = false,
       lasermill = {
@@ -528,7 +529,7 @@ if parts.nitinol then
         }
       },
       energy_required = 24,
-      ingredients = {{type="item", name="nitinol-plate", amount=6}, {type="item", name="se-beryllium-plate", amount=1}, parts.preferred({"carbon-fiber", "plastic-bar"}, {4, 4})},
+      ingredients = tf.compilePrereqs{{type="item", name="nitinol-plate", amount=6}, {type="item", name="se-beryllium-plate", amount=1}, parts.preferred({"carbon-fiber", "plastic-bar"}, {4, 4})},
       results = {{type="item", name="nitinol-mesh", amount=6}},
       enabled = false,
       lasermill = {
@@ -588,7 +589,8 @@ if mods["FreightForwarding"] then
       energy_required = 15,
       allow_decomposition = false,
       ingredients = {{type="item", name="meteoric-nodule", amount=18}, {type="fluid", name="sulfuric-acid", amount=15}},
-      results = {{type="item", name="nickel-ore", amount_min=40, amount_max=50}, {type="item", name="iron-ore", amount_min=0, amount_max=8}, {type="item", name="stone", amount_min=0, amount_max=4}, {type="item", name="meteoric-nodule", amount_min=0, amount_max=6}},
+      results = {{type="item", name="nickel-ore", amount_min=40, amount_max=50}, {type="item", name="iron-ore", amount_min=0, amount_max=8}, {type="item", name="stone", amount_min=0, amount_max=4}, 
+        {type="item", name="meteoric-nodule", amount_min=0, amount_max=6}},
       main_product = "nickel-ore",
       enabled = false,
       crafting_machine_tint = {
