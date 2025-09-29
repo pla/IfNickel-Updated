@@ -198,10 +198,6 @@ if parts.experimental then
     })
   end
 
-  if parts.brassExperiment then
-    tf.addRecipeUnlock("mechanical-engineering", "motorized-articulator")
-  end
-
   if mods["space-exploration"] then
     data:extend({
       {

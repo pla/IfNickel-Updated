@@ -6,7 +6,11 @@ if parts.experimental then
 
   tf.removePrereq("processing-unit", "chemical-science-pack")
   tf.addPrereq("processing-unit", "injection-molding")
-
+  
+  if parts.brassExperiment then
+    tf.addRecipeUnlock("mechanical-engineering", "motorized-articulator")
+  end
+  
   if mods["Krastorio2"] then
     --blue circuits produced in pairs
     rm.AddIngredient("processing-unit", "cooling-fan", 2)
