@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.2
-Date: ????
-  Changes:
+Date: 2025-09-29
+  Bugfixes:
+    - Fixed glass recipes when K2 is disabled and AAI is enabled
+    - Removed RCU references. Need to replace this with something eventually
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.1
 Date: 2025-09-29
