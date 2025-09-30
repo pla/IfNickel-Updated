@@ -138,7 +138,7 @@ if parts.experimental then
       energy_required = 2,
       enabled = false,
       ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="invar-valve", amount=1}, {type="item", name="electronic-circuit", amount=1}, 
-        parts.preferred({"tinned-cable", "kr-glass"}, {2, 1})},
+        parts.preferred({"tinned-cable", mods["Krastorio2"] and "kr-glass" or "glass"}, {2, 1})},
       results = {{type="item", name="flow-controller", amount=1}},
     }
   })
@@ -240,7 +240,7 @@ if parts.experimental then
         enabled = false,
         allow_decomposition = false,
         ingredients = tf.compilePrereqs{{type="item", name="electric-motor", amount=1}, {type="item", name="invar-valve", amount=3}, {type="item", name="electronic-circuit", amount=1}, {type="item", name="se-vitamelange-bloom", amount=2},
-          parts.preferred({"tinned-cable", "kr-glass"}, {3, 3})},
+          parts.preferred({"tinned-cable", mods["Krastorio2"] and "kr-glass" or "glass"}, {3, 3})},
         results = {{type="item", name="flow-controller", amount=3}},
         main_product = "flow-controller"
       },
