@@ -123,7 +123,7 @@ if mods["FluidMustFlow"] then
 
   if parts.experimental then
     if mods["space-exploration"] then
-      tf.addPrereq("Ducts", "advanced-flow-controller")
+      tf.addPrereq("ducts", "advanced-flow-controller")
 
       rm.AddIngredient("duct-end-point-intake", "advanced-flow-controller", 1)
       rm.RemoveIngredient("duct-end-point-intake", "pipe", 6)
@@ -149,7 +149,7 @@ if mods["FluidMustFlow"] then
 
   if not rm.CheckIngredient("duct-end-point-intake", "electric-engine-unit") then
     --don't worry electric engine unit. i still love you
-    tf.addPrereq("Ducts", "electric-engine")
+    tf.addPrereq("ducts", "electric-engine")
     rm.AddIngredient("duct-end-point-intake", "electric-engine-unit", 1)
     rm.AddIngredient("duct-end-point-outtake", "electric-engine-unit", 1)
   end
