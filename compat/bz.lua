@@ -20,8 +20,8 @@ if mods["bztin"] and parts.experimental then
     if mods["Krastorio2"] or mods["MoreScience"] then
       tf.removeSciencePack("tinned-cable", "logistic-science-pack")
       tf.removePrereq("tinned-cable", "logistic-science-pack")
-      if data.raw.technology["kr-matter-copper-processing"] then
-        tf.addPrereq("tinned-cable", "kr-matter-copper-processing")
+      if data.raw.technology["copper-processing"] then
+        tf.addPrereq("tinned-cable", "copper-processing")
       else
         tf.addPrereq("tinned-cable", "automation")
       end

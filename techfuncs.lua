@@ -76,6 +76,26 @@ function techfuncs.removePrereq(tech, prereq)
 			end
 		end
     if fi > 0 then
+      local techs = data.raw.technology
+      for k, v in pairs(techs) do
+        local preqs = data.raw.technology[k].prerequisites
+        if preqs then
+          local add = false
+          local exists = false
+          for _, preq in pairs(preqs) do
+            if preq == tech then
+              add = true
+            end
+            if preq == prereq then
+              exists = true
+            end
+          end
+          if add and not exists then
+            table.insert(preqs, prereq)
+          end
+        end
+        ::continue::
+      end
       table.remove(pr, fi)
     end
 	end
