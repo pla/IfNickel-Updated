@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.3
-Date: ????
+Date: 2025-10-01
   Changes:
+    - Fix for crash when BZTin tinned cable was enabled with SE and K2 due to improper tech migration
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.2
 Date: 2025-09-30
