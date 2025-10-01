@@ -1,9 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.2
-Date: 2025-09-29
+Date: 2025-09-30
+  Changes:
+    - Removed RCU references. Need to replace this with something eventually
   Bugfixes:
     - Fixed glass recipes when K2 is disabled and AAI is enabled
-    - Removed RCU references. Need to replace this with something eventually
+    - Fixed Fluids Must Flow & Flow Control incompatibility
+    - Fixed softlock with Iron Sticks not being unlocked. How did this even work in the 1.1 mod??
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.1
 Date: 2025-09-29
