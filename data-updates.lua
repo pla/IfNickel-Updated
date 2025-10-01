@@ -414,7 +414,7 @@ if deadlock then
 end
 
 if mods["Flow Control"] then
-  tf.addPrereq("flow_control_valves_tech", "valves")
+  --tf.addPrereq("flow_control_valves_tech", "valves")
   rm.ReplaceIngredient("check-valve", "iron-gear-wheel", "invar-valve", 1)
   if parts.experimental then
     rm.ReplaceIngredient("overflow-valve", "iron-gear-wheel", "flow-controller", 1)
