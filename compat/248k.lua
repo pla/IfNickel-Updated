@@ -71,7 +71,7 @@ if mods["248k"] then
     rm.AddIngredient("fu_magnet_recipe", "nickel-electromagnet", 50)
     rm.AddIngredient("fu_plasma_recipe", "nickel-electromagnet", 50)
     rm.AddIngredient("fu_magnet_1_recipe", "nickel-electromagnet", 1)
-    rm.AddProductRaw("fu_magnet_1_recipe", {type="item", name="nickel-electromagnet", amount=1, probability=0.75, catalyst_amount=1})
+    rm.AddProductRaw("fu_magnet_1_recipe", {type="item", name="nickel-electromagnet", amount=1, probability=0.75, ignored_by_productivity=1, ignored_by_stats=1})
     if data.raw["assembling-machine"]["fu_magnet_entity"] then
       data.raw["assembling-machine"]["fu_magnet_entity"].ingredient_count = nil
     end
