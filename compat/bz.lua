@@ -111,10 +111,8 @@ if mods["bzgold"] then
           }
       }
     end
-    motor2.normal.allow_decomposition = false
-    motor2.normal.allow_as_intermediate = false
-    motor2.expensive.allow_decomposition = false
-    motor2.expensive.allow_as_intermediate = false
+    motor2.allow_decomposition = false
+    motor2.allow_as_intermediate = false
     data:extend({motor2})
     if mods["aai-industry"] then
       rm.ReplaceProportional(m2name, "aluminum-cable", "silver-wire", 6)
