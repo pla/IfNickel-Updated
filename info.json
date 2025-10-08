@@ -6,11 +6,33 @@
   "homepage": "https://github.com/AtelierAmber/IfNickel-Updated",
   "description": "Updated to 2.0. Adds nickel ore and plates, invar alloy, and some mechanical components.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0", "? bzlead", "? bzaluminum", "? bzcarbon", "? bzfoundry", "? bztin", "? bztungsten", "? BrassTacks-Updated >= 1.4", "? bzgold", 
-  "?manganese", "? space-exploration", "? aai-industry", "? deadlock-beltboxes-loaders", "? DeadlockCrating", "? Krastorio2", "? FluidMustFlow", "? Expensive_Fluid_Must_Flow_Recipes", "? 248k", "? LunarLandings"],
+  "dependencies": [
+    "base >= 2.0",
+    "? bzlead",
+    "? bzaluminum",
+    "? bzcarbon",
+    "? bzfoundry",
+    "? bztin",
+    "? bztungsten",
+    "? BrassTacks-Updated >= 1.4",
+    "? bzgold",
+    "?manganese",
+    "? space-exploration",
+    "? aai-industry",
+    "? deadlock-beltboxes-loaders",
+    "? DeadlockCrating",
+    "? Krastorio2",
+    "? FluidMustFlow",
+    "? Expensive_Fluid_Must_Flow_Recipes",
+    "? 248k-Redux",
+    "? LunarLandings"
+  ],
   "package": {
     "git_publish_branch": "main",
-    "ignore": [ "imgui.ini", "screenshots/*" ],
+    "ignore": [
+      "imgui.ini",
+      "screenshots/*"
+    ],
     "sync_portal_details": true
   }
 }
