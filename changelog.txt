@@ -1,7 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.5
-Date: ????
+Date: 2025-10-11
   Changes:
+    - Corrected dependecies list
+    - Changed name to If I Had A Nickel Legacy
+    - Added logging for missing recipes.
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Space Ex migration fixes
+    - Fixed productivity not being usable for recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.4
 Date: 2025-10-07
