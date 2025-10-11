@@ -35,18 +35,18 @@ if mods["Krastorio2"] then
       --unreasonable for something that can only be placed in space
       rm.AddIngredient("kr-research-server", "cooling-fan", 10)
       rm.AddIngredient("kr-advanced-research-server", "cooling-fan", 20)
-      rm.AddIngredient("ai-core", "cooling-fan", 2)
+      rm.AddIngredient("kr-ai-core", "cooling-fan", 2)
     end
     tf.addPrereq("kr-advanced-radar", "injection-molding")
     rm.AddIngredient("kr-advanced-radar", "cooling-fan", 1)
-    rm.AddIngredient("energy-control-unit", "cooling-fan", 2)
-    rm.AddIngredient("biusart-lab", "cooling-fan", 5)
+    rm.AddIngredient("kr-energy-control-unit", "cooling-fan", 2)
+    rm.AddIngredient("kr-advanced-lab", "cooling-fan", 5)
 
-    rm.AddIngredient("kr-big-passive-provider-container", "motorized-articulator", 5)
-    rm.AddIngredient("kr-big-active-provider-container", "motorized-articulator", 5)
-    rm.AddIngredient("kr-big-requester-container", "motorized-articulator", 5)
-    rm.AddIngredient("kr-big-buffer-container", "motorized-articulator", 5)
-    rm.AddIngredient("kr-big-storage-container", "motorized-articulator", 5)
+    rm.AddIngredient("kr-passive-provider-warehouse", "motorized-articulator", 5)
+    rm.AddIngredient("kr-active-provider-warehouse", "motorized-articulator", 5)
+    rm.AddIngredient("kr-requester-warehouse", "motorized-articulator", 5)
+    rm.AddIngredient("kr-buffer-warehouse", "motorized-articulator", 5)
+    rm.AddIngredient("kr-storage-warehouse", "motorized-articulator", 5)
 
     rm.ReplaceIngredient("kr-steel-pump", "kr-steel-pipe", "flow-controller", 1)
 
@@ -67,11 +67,11 @@ if mods["Krastorio2"] then
     rm.AddIngredient("kr-atmospheric-condenser", "cooling-fan", 10)
     tf.addPrereq("kr-atmosphere-condensation", "injection-molding")
   else
-    rm.AddIngredient("kr-big-passive-provider-container", parts.motor, 10)
-    rm.AddIngredient("kr-big-active-provider-container", parts.motor, 10)
-    rm.AddIngredient("kr-big-requester-container", parts.motor, 10)
-    rm.AddIngredient("kr-big-buffer-container", parts.motor, 10)
-    rm.AddIngredient("kr-big-storage-container", parts.motor, 10)
+    rm.AddIngredient("kr-passive-provider-warehouse", parts.motor, 10)
+    rm.AddIngredient("kr-active-provider-warehouse", parts.motor, 10)
+    rm.AddIngredient("kr-requester-warehouse", parts.motor, 10)
+    rm.AddIngredient("kr-buffer-warehouse", parts.motor, 10)
+    rm.AddIngredient("kr-storage-warehouse", parts.motor, 10)
 
     rm.ReplaceIngredient("kr-steel-pump", "kr-steel-pipe", "invar-valve", 1)
 
@@ -86,26 +86,24 @@ if mods["Krastorio2"] then
   end
   --tf.addPrereq("valves", mods["aai-industry"] and "basic-fluid-handling" or "fluid-handling")
   tf.addPrereq("kr-fluids-chemistry", "valves")
-  rm.AddIngredient("kr-fluid-burner", "invar-valve", 2)
+  rm.AddIngredient("kr-flare-stack", "invar-valve", 2)
 
-  rm.AddIngredient("kr-medium-passive-provider-container", parts.motor, 2)
-  rm.AddIngredient("kr-medium-active-provider-container", parts.motor, 2)
-  rm.AddIngredient("kr-medium-requester-container", parts.motor, 2)
-  rm.AddIngredient("kr-medium-buffer-container", parts.motor, 2)
-  rm.AddIngredient("kr-medium-storage-container", parts.motor, 2)
+  rm.AddIngredient("kr-passive-provider-strongbox", parts.motor, 2)
+  rm.AddIngredient("kr-active-provider-strongbox", parts.motor, 2)
+  rm.AddIngredient("kr-requester-strongbox", parts.motor, 2)
+  rm.AddIngredient("kr-buffer-strongbox", parts.motor, 2)
+  rm.AddIngredient("kr-storage-strongbox", parts.motor, 2)
 
   if not mods["aai-industry"] then
     rm.AddIngredient("kr-superior-inserter", "electric-engine-unit", 1)
     rm.AddIngredient("kr-superior-long-inserter", "electric-engine-unit", 1)
-    rm.AddIngredient("kr-superior-filter-inserter", "electric-engine-unit", 1)
-    rm.AddIngredient("kr-superior-long-filter-inserter", "electric-engine-unit", 1)
   end
 
   rm.ReplaceIngredient("kr-fuel-refinery", "iron-gear-wheel", parts.motor, 5)
   rm.ReplaceIngredient("kr-gas-power-station", "electronic-circuit", parts.motor, 5)
 
-  rm.ReplaceIngredient("armor-piercing-rifle-magazine", "steel-plate", "invar-plate", 2)
-  rm.ReplaceIngredient("armor-piercing-anti-material-rifle-magazine", "steel-plate", "invar-plate", 3)
+  rm.ReplaceIngredient("kr-armor-piercing-rifle-magazine", "steel-plate", "invar-plate", 2)
+  rm.ReplaceIngredient("kr-armor-piercing-anti-materiel-rifle-magazine", "steel-plate", "invar-plate", 3)
 
   tf.addRecipeUnlock("kr-enriched-ores", "enriched-nickel")
   tf.addRecipeUnlock("kr-enriched-ores", "enriched-nickel-plate")

@@ -80,7 +80,7 @@ if mods["jetpack"] then
 end
 
 if mods["space-exploration"] then
-  rm.AddProductRaw("se-scrap-recycling", {type="item", name="nickel-ore", amount=1, probability=0.05})
+  rm.AddProductRaw("se-scrap-hard-recycling", {type="item", name="nickel-ore", amount=1, probability=0.05})
 
   if parts.experimental then
 
@@ -132,7 +132,7 @@ if mods["space-exploration"] then
       rm.RemoveIngredient("se-low-density-structure-beryllium", "steel-plate", 1)
       rm.RemoveIngredient("se-low-density-structure-beryllium", "aluminum-2219", 1)
 
-      rm.AddIngredient("effectivity-module-6", "nitinol-plate", 20)
+      rm.AddIngredient("efficiency-module-6", "nitinol-plate", 20)
       rm.AddIngredient("speed-module-6", "nitinol-mesh", 25)
       rm.AddIngredient("productivity-module-6", "self-regulating-valve", 30)
 
@@ -248,7 +248,7 @@ if mods["space-exploration"] then
     rm.RemoveIngredient("se-space-assembling-machine", "tungsten-carbide", 99)
     rm.RemoveIngredient("se-space-assembling-machine", "diamond", 99)
 
-    rm.ReplaceIngredient("se-cargo-pod", "fast-inserter", "motorized-articulator", 2)
+    rm.ReplaceIngredient("cargo-pod", "fast-inserter", "motorized-articulator", 2)
 
     rm.AddIngredient("se-fuel-refinery", "flow-controller", 10)
 
@@ -268,7 +268,7 @@ if mods["space-exploration"] then
 
     if settings.startup["ifnickel-se-maintenance"].value then
       add_catalyst("se-radiating-space-coolant-slow", "flow-controller", 1, 0.06, "se-scrap", 10)
-      add_catalyst("se-radiating-space-coolant-normal", "flow-controller", 1, 0.005, "se-scrap", 10)
+      add_catalyst("se-space-coolant-warm", "flow-controller", 1, 0.005, "se-scrap", 10)
       add_catalyst("se-radiating-space-coolant-fast", "flow-controller", 1, 0.0005, "se-scrap", 10)
       data.raw.recipe["se-radiating-space-coolant-slow"].allow_decomposition = false
       data.raw.recipe["se-space-coolant-warm"].allow_decomposition = false
