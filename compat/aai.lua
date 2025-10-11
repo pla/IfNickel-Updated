@@ -248,7 +248,7 @@ if mods["space-exploration"] then
     rm.RemoveIngredient("se-space-assembling-machine", "tungsten-carbide", 99)
     rm.RemoveIngredient("se-space-assembling-machine", "diamond", 99)
 
-    rm.ReplaceIngredient("cargo-pod", "fast-inserter", "motorized-articulator", 2)
+    rm.ReplaceIngredient("se-cargo-rocket-cargo-pod", "fast-inserter", "motorized-articulator", 2)
 
     rm.AddIngredient("se-fuel-refinery", "flow-controller", 10)
 
