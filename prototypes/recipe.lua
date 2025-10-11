@@ -112,7 +112,7 @@ if parts.experimental then
       category = "crafting",
       energy_required = 2,
       enabled = false,
-      ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {2, 2}), {type="item", name="electronic-circuit", amount=1}, parts.preferred({"articulated-mechanism", "inserter-parts", "iron-gear-wheel"}, 
+      ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {2, 2}), {type="item", name="electronic-circuit", amount=1}, parts.preferred({"articulated-mechanism", "kr-inserter-parts", "iron-gear-wheel"},
         {2, 1, 2}), parts.optionalIngredient("bronze-plate", 2)},
       results = {{type="item", name="motorized-articulator", amount=1}},
     },
