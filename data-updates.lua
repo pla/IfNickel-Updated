@@ -30,10 +30,10 @@ if parts.experimental then
   rm.AddIngredient("beacon", "cooling-fan", 5)
 
   rm.AddIngredient("speed-module-3", "cooling-fan", 5)
-  rm.AddIngredient("effectivity-module-3", "cooling-fan", 5)
+  rm.AddIngredient("efficiency-module-3", "cooling-fan", 5)
   rm.AddIngredient("productivity-module-3", "cooling-fan", 5)
 
-  rm.AddIngredient("fusion-reactor-equipment", "cooling-fan", 100)
+  rm.AddIngredient("kr-fusion-reactor-equipment", "cooling-fan", 100)
   rm.AddIngredient("personal-roboport-mk2-equipment", "cooling-fan", 50)
   rm.AddIngredient("energy-shield-mk2-equipment", "cooling-fan", 10)
 
@@ -223,7 +223,6 @@ end
 if mods["Krastorio2"] and not mods["aai-industry"] then
   rm.AddIngredient("long-handed-inserter", parts.motor, 1)
   rm.AddIngredient("fast-inserter", parts.motor, 2)
-  rm.AddIngredient("filter-inserter", parts.motor, 2)
 else
   rm.ReplaceIngredient("fast-inserter", "electronic-circuit", parts.motor, 1)
 end
@@ -231,12 +230,12 @@ end
 
 rm.AddIngredient("fluid-wagon", "invar-valve", 6)
 
-rm.AddIngredient("logistic-chest-active-provider", parts.motor, 1)
+rm.AddIngredient("active-provider-chest", parts.motor, 1)
 if not mods["aai-containers"] then
-  rm.AddIngredient("logistic-chest-passive-provider", parts.motor, 1)
-  rm.AddIngredient("logistic-chest-storage", parts.motor, 1)
-  rm.AddIngredient("logistic-chest-requester", parts.motor, 1)
-  rm.AddIngredient("logistic-chest-buffer", parts.motor, 1)
+  rm.AddIngredient("passive-provider-chest", parts.motor, 1)
+  rm.AddIngredient("storage-chest", parts.motor, 1)
+  rm.AddIngredient("requester-chest", parts.motor, 1)
+  rm.AddIngredient("buffer-chest", parts.motor, 1)
 end
 
 if not parts.aai  then
