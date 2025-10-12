@@ -401,7 +401,7 @@ if parts.nitinol then
   })
 end
 
-if mods["248k"] then
+if mods["248k-Redux"] then
   data:extend({
     {
       type = "technology",
