@@ -73,7 +73,7 @@ end
 if not mods["BrassTacks-Updated"] then
   if mods["Krastorio2"] or parts.experimental then
     cu.moveItem("articulated-mechanism", "articulated-components", "a")
-    cu.moveItem("inserter-parts", "articulated-components", "b")
+    cu.moveItem("kr-inserter-parts", "articulated-components", "b")
     cu.moveItem("automation-core", "articulated-components", "c")
     cu.moveItem("motorized-articulator", "articulated-components", "d")
     cu.moveItem("complex-joint", "articulated-components", "e")
