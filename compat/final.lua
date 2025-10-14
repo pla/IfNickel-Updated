@@ -16,21 +16,21 @@ if mods["space-exploration"] then
   rm.RemoveProduct("se-core-fragment-omni", "nickel-ore", 4)
 end
 
-if rm.CheckIngredient("flow-controller", "automation-core") then
+if rm.CheckIngredient("flow-controller", "kr-automation-core") then
   --no actually i want that there
   rm.AddIngredient("flow-controller", "electronic-circuit", 1)
   if rm.CheckIngredient("flow-controller", "tinned-cable") then
     --I want this recipe to max out at 4 ingredients
-    rm.RemoveIngredient("flow-controller", "automation-core", 1)
+    rm.RemoveIngredient("flow-controller", "kr-automation-core", 1)
   else
     --only want SE glass in the recipe
     rm.RemoveIngredient("flow-controller", mods["Krastorio2"] and "kr-glass" or "glass", 1)
     --it's in the recipe now, so can be removed from some things that use flow controllers
-    rm.RemoveIngredient("kr-electrolysis-plant", "automation-core", 3)
-    rm.RemoveIngredient("kr-filtration-plant", "automation-core", 3)
-    rm.RemoveIngredient("chemical-plant", "automation-core", 3)
-    rm.RemoveIngredient("pumpjack", "automation-core", 3)
-    rm.RemoveIngredient("oil-refinery", "automation-core", 5)
+    rm.RemoveIngredient("kr-electrolysis-plant", "kr-automation-core", 3)
+    rm.RemoveIngredient("kr-filtration-plant", "kr-automation-core", 3)
+    rm.RemoveIngredient("chemical-plant", "kr-automation-core", 3)
+    rm.RemoveIngredient("pumpjack", "kr-automation-core", 3)
+    rm.RemoveIngredient("oil-refinery", "kr-automation-core", 5)
   end
 end
 
@@ -74,7 +74,7 @@ if not mods["BrassTacks-Updated"] then
   if mods["Krastorio2"] or parts.experimental then
     cu.moveItem("articulated-mechanism", "articulated-components", "a")
     cu.moveItem("kr-inserter-parts", "articulated-components", "b")
-    cu.moveItem("automation-core", "articulated-components", "c")
+    cu.moveItem("kr-automation-core", "articulated-components", "c")
     cu.moveItem("motorized-articulator", "articulated-components", "d")
     cu.moveItem("complex-joint", "articulated-components", "e")
     cu.moveItem("machining-tool", "articulated-components", "f")
