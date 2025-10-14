@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.7
-Date: ????
-  Changes:
+Date: 2025-10-14
+  Bugfixes:
+    - Fixed Krastorio 2 naming for Automation Core
+    - Fixed Krastorio 2 naming for Inserter Parts
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.6
 Date: 2025-10-11
