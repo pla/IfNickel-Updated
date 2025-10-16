@@ -410,12 +410,12 @@ end
 
 if mods["se-space-trains"] then
   if data.raw.item["nickel-electromagnet"] then
-    rm.AddIngredient("recipe-space-locomotive", "nickel-electromagnet", 20)
-    rm.AddIngredient("recipe-space-cargo-wagon", "nickel-electromagnet", 20)
-    rm.AddIngredient("recipe-space-fluid-wagon", "nickel-electromagnet", 20)
+    rm.AddIngredient("space-locomotive", "nickel-electromagnet", 20)
+    rm.AddIngredient("space-cargo-wagon", "nickel-electromagnet", 20)
+    rm.AddIngredient("space-fluid-wagon", "nickel-electromagnet", 20)
   else
-    rm.AddIngredient("recipe-space-locomotive", "nickel-plate", 20)
-    rm.AddIngredient("recipe-space-cargo-wagon", "nickel-plate", 20)
-    rm.AddIngredient("recipe-space-fluid-wagon", "nickel-plate", 20)
+    rm.AddIngredient("space-locomotive", "nickel-plate", 20)
+    rm.AddIngredient("space-cargo-wagon", "nickel-plate", 20)
+    rm.AddIngredient("space-fluid-wagon", "nickel-plate", 20)
   end
 end
