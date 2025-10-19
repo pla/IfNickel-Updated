@@ -80,7 +80,7 @@ if mods["248k-Redux"] then
 
   if parts.experimental then
     if mods["space-exploration"] then
-      if mods["bztitanium"] then
+      if parts.bz.titanium then
         rm.AddIngredient("fu_turbine_recipe", "self-regulating-valve", 20)
         rm.AddIngredient("fu_boiler_recipe", "self-regulating-valve", 20)
         rm.AddIngredient("fu_exchanger_item_recipe", "self-regulating-valve", 20)

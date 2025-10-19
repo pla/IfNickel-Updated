@@ -31,7 +31,7 @@ for k, v in pairs(data.raw["technology"]) do
 end
 data.raw.recipe["iron-stick"].enabled = true
 if not mods["aai-industry"] then
-  if mods["bzaluminum"] then
+  if parts.bz.aluminum then
     data:extend({
       {
         type = "recipe",

@@ -5,11 +5,11 @@ local cu = require("category-utils")
 
 local u = require("util")
 
-if mods["bzgas"] then
+if parts.bz.gas then
   rm.AddIngredient("gas-extractor", parts.motor, 1)
 end
 
-if mods["bztin"] and parts.experimental then
+if parts.bz.tin and parts.experimental then
   rm.AddIngredient("cooling-fan", "solder", 1)
   --these use significantly more solder than cooling fans. however cooling fans are used for a lot of other things in high demand (blue circuits)
   rm.RemoveIngredient("roboport", "solder", 20)
@@ -29,11 +29,11 @@ if mods["bztin"] and parts.experimental then
   end
 end
 
-if mods["bztungsten"] and parts.experimental then
+if parts.bz.tungsten and parts.experimental then
   tf.addPrereq("gimbaled-thruster", "rocketry")
 end
 
-if mods["bzgold"] then
+if parts.bz.gold then
 
   if data.raw.item["silver-brazing-alloy"] and rm.CheckIngredient("invar-valve", "copper-plate") then
     tf.addPrereq("valves", "silver-processing")
