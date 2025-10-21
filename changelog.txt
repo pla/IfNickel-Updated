@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.9
 Date: ????
-  Changes:
+  Bugfixes:
+    - Fixed path references when BZ 2.0 mod forks are used
+    - Fixed high res graphics not being used for some prototypes (Cackling Fiend) 
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.8
 Date: 2025-10-19
