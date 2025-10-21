@@ -89,7 +89,7 @@ if parts.bz.gold then
             icon_size = 64
           },
           {
-            icon = "__bzgold__/graphics/icons/silver-wire.png",
+            icon = "__bzgold" .. (mods["bzgold2"] and "2" or "") .. "__/graphics/icons/silver-wire.png",
             icon_size = 64,
             icon_mipmaps = 4,
             scale = 0.25,
@@ -103,7 +103,7 @@ if parts.bz.gold then
             icon_size = 64
           },
           {
-            icon = "__bzgold__/graphics/icons/silver-wire.png",
+            icon = "__bzgold" .. (mods["bzgold2"] and "2" or "") .. "__/graphics/icons/silver-wire.png",
             icon_size = 64,
             icon_mipmaps = 4,
             scale = 0.25,
