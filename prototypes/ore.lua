@@ -53,20 +53,12 @@ data:extend({
     {
       sheet =
       {
-        filename = "__IfNickel-Updated__/graphics/ore/nickel-ore.png",
+        filename = "__IfNickel-Updated__/graphics/ore/hr-nickel-ore.png",
         priority = "extra-high",
-        size = 64,
+        size = 128,
         frame_count = 8,
         variation_count = 8,
-        hr_version =
-        {
-          filename = "__IfNickel-Updated__/graphics/ore/hr-nickel-ore.png",
-          priority = "extra-high",
-          size = 128,
-          frame_count = 8,
-          variation_count = 8,
-          scale = 0.5
-        }
+        scale = 0.5
       }
     },
     mining_visualisation_tint = {r=0.1, g=0.1, b=0.8}
