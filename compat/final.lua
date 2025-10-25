@@ -56,7 +56,7 @@ if mods["Krastorio2"] then
     rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50)
     rm.ReplaceIngredient("chemical-science-pack", mods["Krastorio2"] and "kr-glass" or "glass", "battery", 5)
   elseif not mods["space-exploration"] then
-      if rm.CheckIngredient("utility-science-pack", "rocket-fuel") then
+      if rm.CheckIngredient("utility-science-pack", "rocket-fuel") and parts.experimental then
         rm.AddIngredient("utility-science-pack", "complex-joint", 5)
       end
     end
