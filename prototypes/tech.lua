@@ -258,15 +258,13 @@ if mods["Krastorio2"] then
       name = "kr-matter-nickel-processing",
       icons = {
         {
-          icon = "__Krastorio2Assets__/technologies/matter-iron.png",
+          icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
           icon_size = 256,
-          icon_mipmaps = 4,
         },
         {
           icon = "__IfNickel-Updated__/graphics/icons/nickel-ore.png",
           icon_size = 64,
-          icon_mipmaps = 4,
-          scale = 2
+          scale = 1
         }
       },
       effects = {},
