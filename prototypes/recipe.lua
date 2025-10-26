@@ -344,15 +344,15 @@ if mods["Krastorio2"] then
     material = {type = "item", name = "nickel-ore", amount=10},
     matter_count = 5,
     energy_required = 1,
-    need_stabilizer = false,
-    unlocked_by_technology = "kr-matter-nickel-processing"
+    needs_stabilizer = false,
+    unlocked_by = "kr-matter-nickel-processing"
   })
   matterutil.make_deconversion_recipe({
     material = {type = "item", name = "nickel-plate", amount=10},
     matter_count = mods["space-exploration"] and 7.5 or 10,
     energy_required = 3,
-    need_stabilizer = true,
-    unlocked_by_technology = "kr-matter-nickel-processing"
+    needs_stabilizer = true,
+    unlocked_by = "kr-matter-nickel-processing"
   })
 end
 
