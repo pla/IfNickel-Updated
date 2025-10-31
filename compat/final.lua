@@ -35,9 +35,11 @@ if rm.CheckIngredient("flow-controller", "kr-automation-core") then
 end
 
 if mods["Krastorio2"] then
-  local ing = {}
-  ing = data.raw.recipe["pumpjack"].ingredients
-  data.raw.recipe["kr-mineral-water-pumpjack"].ingredients = ing
+  if data.raw.recipe["kr-mineral-water-pumpjack"] then
+    local ing = {}
+    ing = data.raw.recipe["pumpjack"].ingredients
+    data.raw.recipe["kr-mineral-water-pumpjack"].ingredients = ing
+  end
 
   if mods["aai-industry"] then
     rm.RemoveIngredient("bulk-inserter", "electronic-circuit", 2)
