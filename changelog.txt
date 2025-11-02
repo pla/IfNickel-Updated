@@ -1,7 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.10
-Date: ????
-  Changes:
+Date: 2025-11-01
+  Bugfixes:
+    - Fix experimental parts not loading when SE was disabled (Pla)
+    - Fixed Matter generation recipes (Pla)
 ---------------------------------------------------------------------------------------------------
 Version: 2.2.9
 Date: 2025-10-20
