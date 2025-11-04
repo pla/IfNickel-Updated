@@ -39,13 +39,13 @@ if parts.bz.gold then
     tf.addPrereq("valves", "silver-processing")
     rm.ReplaceIngredient("invar-valve", "copper-plate", "silver-brazing-alloy", 2)
     rm.RemoveIngredient("pumpjack", "silver-brazing-alloy", 99999)
-    rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999)
+    --rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999)
     rm.RemoveIngredient("oil-refinery", "silver-brazing-alloy", 99999)
     rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999)
   else if rm.CheckIngredient("invar-valve", "airtight-seal") then
     --airtight seal will have SBA
     rm.RemoveIngredient("pumpjack", "silver-brazing-alloy", 99999)
-    rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999)
+    --rm.RemoveIngredient("kr-mineral-water-pumpjack", "silver-brazing-alloy", 99999)
     rm.RemoveIngredient("oil-refinery", "silver-brazing-alloy", 99999)
     rm.RemoveIngredient("chemical-plant", "silver-brazing-alloy", 99999)
   end end

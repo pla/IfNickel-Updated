@@ -37,7 +37,7 @@ end
 if mods["Krastorio2"] then
   local ing = {}
   ing = data.raw.recipe["pumpjack"].ingredients
-  data.raw.recipe["kr-mineral-water-pumpjack"].ingredients = ing
+  --data.raw.recipe["kr-mineral-water-pumpjack"].ingredients = ing
 
   if mods["aai-industry"] then
     rm.RemoveIngredient("bulk-inserter", "electronic-circuit", 2)

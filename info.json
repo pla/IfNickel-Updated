@@ -28,7 +28,7 @@
     "? aai-industry",
     "? deadlock-beltboxes-loaders",
     "? DeadlockCrating",
-    "? Krastorio2",
+    "? Krastorio2 >= 2.0.11",
     "? FluidMustFlow",
     "? Expensive_Fluid_Must_Flow_Recipes",
     "? 248k-Redux",
