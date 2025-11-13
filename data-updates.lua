@@ -408,7 +408,7 @@ end
 
 rm.AddIngredient("transport-belt-beltbox", parts.motor, 1)
 rm.AddIngredient("express-transport-belt-beltbox", "electric-engine-unit", 1)
-if deadlock then
+if deadlock and data.raw["technology"]["deadlock-stacking-3"] then
   tf.addPrereq("deadlock-stacking-3", "electric-engine")
 end
 
