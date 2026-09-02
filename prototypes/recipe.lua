@@ -18,7 +18,7 @@ data:extend({
   {
     type = "recipe",
     name = "invar-valve",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     enabled = false,
     energy_required = 3,
     ingredients = tf.compilePrereqs{{type="item", name="invar-plate", amount=1}, {type="item", name="pipe", amount=2}, parts.preferred({"airtight-seal", "brass-plate", "copper-plate"}, {1, 2, 2})},
@@ -37,7 +37,7 @@ if not mods["aai-industry"] then
       {
         type = "recipe",
         name = "motor",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 1,
         ingredients = {{type="item", name="nickel-plate", amount=4}, {type="item", name="iron-stick", amount=2}, {type="item", name="aluminum-cable", amount=1}},
         results = {{type="item", name="motor",amount=2}},
@@ -48,7 +48,7 @@ if not mods["aai-industry"] then
       {
         type = "recipe",
         name = "motor",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 0.5,
         ingredients = {{type="item", name="nickel-plate", amount=2}, {type="item", name="iron-stick", amount=1}, {type="item", name="copper-cable", amount=2}},
         results = {{type="item", name="motor", amount=1}},
@@ -62,7 +62,7 @@ if not mods["galdocs-manufacturing"] then
     {
       type = "recipe",
       name = "nickel-plate",
-      category = "smelting",
+      categories = {"smelting"},
       energy_required = 3.2 * yield,
       ingredients = {{type="item", name="nickel-ore", amount=cost}},
       results = {{type="item", name="nickel-plate", amount=yield}},
@@ -85,7 +85,7 @@ if not mods["galdocs-manufacturing"] then
       {
         type = "recipe",
         name = "invar-precursor",
-        category = "crafting",
+        categories = {"crafting"},
         enabled = false,
         energy_required = 0.5,
         ingredients = {{type="item", name="iron-plate", amount=2}, {type="item", name="nickel-plate", amount=2}},
@@ -94,7 +94,7 @@ if not mods["galdocs-manufacturing"] then
       {
         type = "recipe",
         name = "invar-plate",
-        category = "smelting",
+        categories = {"smelting"},
         energy_required = 6.4,
         enabled = false,
         ingredients = {{type="item", name="invar-precursor", amount=1}},
@@ -110,7 +110,7 @@ if parts.experimental then
     {
       type = "recipe",
       name = "motorized-articulator",
-      category = "crafting",
+      categories = {"crafting"},
       energy_required = 2,
       enabled = false,
       ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {2, 2}), {type="item", name="electronic-circuit", amount=1}, parts.preferred({"articulated-mechanism", "kr-inserter-parts", "iron-gear-wheel"},
@@ -120,7 +120,7 @@ if parts.experimental then
     {
       type = "recipe",
       name = "cooling-fan",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 2,
       enabled = false,
       ingredients = {parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="plastic-bar", amount=4}},
@@ -129,7 +129,7 @@ if parts.experimental then
     {
       type = "recipe",
       name = "gimbaled-thruster",
-      category = "crafting",
+      categories = {"crafting"},
       energy_required = 30,
       enabled = false,
       ingredients = tf.compilePrereqs{{type="item", name="motorized-articulator", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"rocket-engine-nozzle", "se-heat-shielding", "invar-plate"}, {2, 1, 2}), 
@@ -139,7 +139,7 @@ if parts.experimental then
     {
       type = "recipe",
       name = "flow-controller",
-      category = "crafting",
+      categories = {"crafting"},
       energy_required = 2,
       enabled = false,
       ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="invar-valve", amount=1}, {type="item", name="electronic-circuit", amount=1}, 
@@ -153,7 +153,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "pack-gimbaled-thruster",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 2,
         enabled = false,
         icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster-packed.png",
@@ -167,7 +167,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "unpack-gimbaled-thruster",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 2,
         enabled = false,
         icon = "__IfNickel-Updated__/graphics/icons/gimbaled-thruster-packed.png",
@@ -186,7 +186,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "machining-tool",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 2,
         enabled = false,
         ingredients = tf.compilePrereqs{parts.preferred({"electric-motor", "motor"}, {1, 1}), {type="item", name="motorized-articulator", amount=1}, parts.preferred({"tungsten-carbide", "steel-plate"}, {2, 1})},
@@ -195,7 +195,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "advanced-machining-tool",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 4,
         enabled = false,
         ingredients = tf.compilePrereqs{{type="item", name="machining-tool", amount=1}, parts.optionalIngredient("diamond", 1), parts.preferred({"complex-joint", "bearing", "iron-gear-wheel"}, {1, 2, 4}), {type="item", name="speed-module", amount=1}},
@@ -209,7 +209,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "nickel-electromagnet",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 2,
         enabled = false,
         ingredients = {{type="item", name="electronic-circuit", amount=1}, {type="item", name="nickel-plate", amount=4}, {type="item", name="copper-cable", amount=4}},
@@ -218,7 +218,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "advanced-flow-controller",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 8,
         enabled = false,
         allow_decomposition = false,
@@ -228,7 +228,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "flow-controller-biological",
-        category = "advanced-crafting",
+        categories = {"advanced-crafting"},
         icons = {
           {
             icon = "__IfNickel-Updated__/graphics/icons/flow-controller.png",
@@ -252,7 +252,7 @@ if parts.experimental then
       {
         type = "recipe",
         name = "advanced-flow-controller-biological",
-        category = "advanced-crafting",
+        categories = {"advanced-crafting"},
         icons = {
           {
             icon = "__IfNickel-Updated__/graphics/icons/advanced-flow-controller.png",
@@ -283,7 +283,7 @@ if mods["Krastorio2"] then
       {
         type = "recipe",
         name = "enriched-nickel",
-        category = "chemistry",
+        categories = {"chemistry"},
         energy_required = 3,
         ingredients = {{type="item", name="nickel-ore", amount=9}, {type="fluid", name="sulfuric-acid", amount=3}, {type="fluid", name="water", amount=25, ignored_by_stats = 25}},
         results = {{type="item", name="enriched-nickel", amount=mods["space-exploration"] and 9 or 6}, {type="fluid", name="kr-dirty-water", amount=25, ignored_by_productivity=25, ignored_by_stats=25}},
@@ -303,7 +303,7 @@ if mods["Krastorio2"] then
           { icon = "__IfNickel-Updated__/graphics/icons/nickel-plate.png", icon_size = 64 },
           { icon = "__IfNickel-Updated__/graphics/icons/enriched-nickel.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
-        category = "smelting",
+        categories = {"smelting"},
         energy_required = 16,
         ingredients = {{type="item", name="enriched-nickel", amount=5}},
         results = {{type="item", name="nickel-plate",amount=5}},
@@ -314,7 +314,7 @@ if mods["Krastorio2"] then
     		name = "dirty-water-filtration-nickel",
         subgroup = "raw-material",
     		order = "w013[dirty-water-filtration-zinc]",
-    		category = "kr-fluid-filtration",
+    		categories = {"kr-fluid-filtration"},
     		icons =
     		{
     			{
@@ -384,7 +384,7 @@ if mods["space-exploration"] then
         icon_size = 64,
         subgroup = "nickel",
         name = "molten-nickel",
-        category = "smelting",
+        categories = {"smelting"},
         energy_required = 60,
         ingredients = {{type="item", name=mods["Krastorio2"] and "enriched-nickel" or "nickel-ore", amount=24}, {type="fluid", name="se-pyroflux", amount=10}},
         results = {{type="fluid", name="molten-nickel", amount= mods["Krastorio2"] and 750 or 900}},
@@ -393,7 +393,7 @@ if mods["space-exploration"] then
       {
         type = "recipe",
         name = "nickel-ingot",
-        category = "casting",
+        categories = {"casting"},
         energy_required = 25,
         ingredients = {{type="fluid", name="molten-nickel", amount=250}},
         results = {{type="item", name="nickel-ingot",amount=1}},
@@ -406,7 +406,7 @@ if mods["space-exploration"] then
           { icon = "__IfNickel-Updated__/graphics/icons/nickel-plate.png", icon_size = 64 },
           { icon = "__IfNickel-Updated__/graphics/icons/nickel-ingot.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 5,
         ingredients = {{type="item", name="nickel-ingot", amount=1}},
         results = {{type="item", name="nickel-plate",amount=10}},
@@ -416,7 +416,7 @@ if mods["space-exploration"] then
       {
         type = "recipe",
         name = "invar-ingot",
-        category = "casting",
+        categories = {"casting"},
         energy_required = 50,
         ingredients = {{type="fluid", name="se-molten-iron", amount=500}, {type="item", name="nickel-ingot", amount=2}},
         results = {{type="item", name="invar-ingot",amount=1}},
@@ -429,7 +429,7 @@ if mods["space-exploration"] then
           { icon = "__IfNickel-Updated__/graphics/icons/invar-plate.png", icon_size = 64 },
           { icon = "__IfNickel-Updated__/graphics/icons/invar-ingot.png", icon_size = 64, scale=0.25, shift= {-8, -8}},
         },
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 5,
         ingredients = {{type="item", name="invar-ingot", amount=1}},
         results = {{type="item", name="invar-plate",amount=10}},
@@ -458,7 +458,7 @@ if parts.nitinol then
       {
         type = "recipe",
         name = "nitinol-precursor",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 0.5,
         ingredients = {{type="item", name="nickel-plate", amount=3}, {type="item", name="titanium-plate", amount=1}},
         results = {{type="item", name="nitinol-precursor", amount=2}},
@@ -467,7 +467,7 @@ if parts.nitinol then
       {
         type = "recipe",
         name = "nitinol-plate",
-        category = "smelting",
+        categories = {"smelting"},
         energy_required = 8,
         ingredients = {{type="item", name="nitinol-precursor", amount=1}},
         results = {{type="item", name="nitinol-plate", amount=1}},
@@ -479,7 +479,7 @@ if parts.nitinol then
     {
       type = "recipe",
       name = "nitinol-plate-space",
-      category = "space-thermodynamics",
+      categories = {"space-thermodynamics"},
       icons = {
         {
           icon = "__IfNickel-Updated__/graphics/icons/nitinol-plate.png",
@@ -500,7 +500,7 @@ if parts.nitinol then
     {
       type = "recipe",
       name = "self-regulating-valve",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 8,
       ingredients = tf.compilePrereqs{{type="item", name="nitinol-plate", amount=1}, {type="item", name="invar-valve", amount=1}, parts.preferred({"titanium-palladium-flange", "titanium-plate"}, {2, 2})},
       results = {{type="item", name="self-regulating-valve", amount=2}},
@@ -509,7 +509,7 @@ if parts.nitinol then
     {
       type = "recipe",
       name = "nitinol-mesh",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 8,
       ingredients = tf.compilePrereqs{{type="item", name="nitinol-plate", amount=3}, parts.preferred({"aluminum-2219", "iron-stick"}, {2, 4}), parts.preferred({"carbon-fiber", "plastic-bar"}, {2, 2})},
       results = {{type="item", name="nitinol-mesh", amount=2}},
@@ -526,7 +526,7 @@ if parts.nitinol then
     {
       type = "recipe",
       name = "nitinol-mesh-beryllium",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       icons = {
         {
           icon = "__IfNickel-Updated__/graphics/icons/nitinol-mesh.png",
@@ -558,7 +558,7 @@ if parts.nitinol then
       {
         type = "recipe",
         name = "nitinol-plate-helium",
-        category = "smelting",
+        categories = {"smelting"},
         icons = {
           {
             icon = "__IfNickel-Updated__/graphics/icons/nitinol-plate.png",
@@ -585,7 +585,7 @@ if mods["FreightForwarding"] then
     {
       type = "recipe",
       name = "meteoric-nodule-dredging",
-      category = "ff-dredging",
+      categories = {"ff-dredging"},
       energy_required = 50,
       ingredients = {},
       results = {{type="item", name="meteoric-nodule", amount_min=100, amount_max=200}},
@@ -596,7 +596,7 @@ if mods["FreightForwarding"] then
     {
       type = "recipe",
       name = "meteoric-nodule-washing",
-      category = "chemistry",
+      categories = {"chemistry"},
       energy_required = 15,
       allow_decomposition = false,
       ingredients = {{type="item", name="meteoric-nodule", amount=18}, {type="fluid", name="sulfuric-acid", amount=15}},
@@ -619,7 +619,7 @@ if mods["248k-Redux"] then
     {
       type = "recipe",
       name = "248k-nickel-atom-hot",
-      category = "fu_star_engine_core_crafting_category",
+      categories = {"fu_star_engine_core_crafting_category"},
       energy_required = 1,
       ingredients = {{type="fluid", name="fu_protium_heated", amount=30000}},
       results = {{type="fluid", name="248k-nickel-atom-hot", amount=1000}},
@@ -629,7 +629,7 @@ if mods["248k-Redux"] then
     {
       type = "recipe",
       name = "248k-nickel-atom",
-      category = "fu_star_engine_cooler_crafting_category",
+      categories = {"fu_star_engine_cooler_crafting_category"},
       energy_required = 1,
       ingredients = {{type="fluid", name="248k-nickel-atom-hot", amount=500}},
       results = {{type="fluid", name="248k-nickel-atom", amount=500}},
@@ -639,7 +639,7 @@ if mods["248k-Redux"] then
     {
       type = "recipe",
       name = "nickel-from-atoms",
-      category = "crafting-with-fluid",
+      categories = {"crafting-with-fluid"},
       energy_required = 6,
       ingredients = {{type="fluid", name="248k-nickel-atom", amount=500}},
       results = {{type="item", name="nickel-plate",amount=500}},
@@ -649,7 +649,7 @@ if mods["248k-Redux"] then
     {
       type = "recipe",
       name = "invar-from-atoms",
-      category = "chemistry",
+      categories = {"chemistry"},
       energy_required = 6,
       ingredients = {{type="fluid", name="248k-nickel-atom", amount=250}, {type="fluid", name="fu_iron", amount=250}},
       results = {{type="item", name="invar-plate",amount=500}},

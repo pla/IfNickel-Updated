@@ -52,7 +52,7 @@ if mods["Krastorio2"] then
   end
 
   if not mods["BrassTacks-Updated"] then
-    data.raw.recipe["chemical-science-pack"].category = data.raw.recipe["logistic-science-pack"].category
+    data.raw.recipe["chemical-science-pack"].categories = data.raw.recipe["logistic-science-pack"].categories
     rm.RemoveIngredient("chemical-science-pack", "sulfuric-acid", 50)
     rm.ReplaceIngredient("chemical-science-pack", mods["Krastorio2"] and "kr-glass" or "glass", "battery", 5)
   elseif not mods["space-exploration"] then

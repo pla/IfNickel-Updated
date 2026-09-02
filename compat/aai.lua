@@ -369,7 +369,7 @@ if mods["space-exploration"] then
           icon_size = 64, icon_mipmaps = 4, scale = 0.25
         }
       },
-      category = "hard-recycling",
+      categories = {"hard-recycling"},
       energy_required = 1,
       ingredients = {{type="item", name="nickel-ore", amount=50}},
       results = {{type="item", name="landfill", amount=1}},
