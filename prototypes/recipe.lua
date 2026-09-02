@@ -330,7 +330,7 @@ if mods["Krastorio2"] then
     		},
     		energy_required = 2,
     		ingredients = { {type = "fluid", name = "kr-dirty-water", amount = 100, ignored_by_stats = 100} },
-    		results =	{ {type = "fluid", name = "water", amount = 90, ignored_by_productivity=90, ignored_by_stats = 90}, {type = "item",  name = "stone", probability = 0.3, amount = 1}, {type = "item",  name = "nickel-ore", probability = 0.1, amount = 1},
+    		results =	{ {type = "fluid", name = "water", amount = 90, ignored_by_productivity=90, ignored_by_stats = 90}, {type = "item",  name = "stone", independent_probability = 0.3, amount = 1}, {type = "item",  name = "nickel-ore", independent_probability = 0.1, amount = 1},
     		},
     		crafting_machine_tint =
     		{
@@ -358,8 +358,8 @@ if mods["Krastorio2"] then
   local material_name = "nickel-ore"
   if mods["space-exploration"] then
     rm.AddIngredient("kr-matter-to-" .. material_name, "se-kr-charged-basic-stabilizer", 1)
-    rm.AddProductRaw("kr-matter-to-" .. material_name, { type = "item", name = "se-kr-charged-basic-stabilizer", amount = 1, probability = 0.199 })
-    rm.AddProductRaw("kr-matter-to-" .. material_name, { type = "item", name = "se-kr-basic-stabilizer", amount = 1, probability = 0.8 })
+    rm.AddProductRaw("kr-matter-to-" .. material_name, { type = "item", name = "se-kr-charged-basic-stabilizer", amount = 1, independent_probability = 0.199 })
+    rm.AddProductRaw("kr-matter-to-" .. material_name, { type = "item", name = "se-kr-basic-stabilizer", amount = 1, independent_probability = 0.8 })
   end
 end
 

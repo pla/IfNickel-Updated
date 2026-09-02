@@ -30,7 +30,7 @@ if mods["ch-concentrated-solar"] then
 end
 
 if mods["FreightForwarding"] then
-  --rm.AddProductRaw("ff-slag-leaching", {type="item", name="nickel-ore", amount=1, probability=0.25})
+  --rm.AddProductRaw("ff-slag-leaching", {type="item", name="nickel-ore", amount=1, independent_probability=0.25})
 
   tf.addRecipeUnlock("ff-dredging", "meteoric-nodule-dredging")
   tf.addRecipeUnlock("ff-dredging", "meteoric-nodule-washing")

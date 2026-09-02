@@ -72,7 +72,7 @@ if mods["248k-Redux"] then
     rm.AddIngredient("fu_magnet", "nickel-electromagnet", 50)
     rm.AddIngredient("fu_plasma", "nickel-electromagnet", 50)
     rm.AddIngredient("fu_materials_magnet", "nickel-electromagnet", 1)
-    rm.AddProductRaw("fu_materials_magnet", {type="item", name="nickel-electromagnet", amount=1, probability=0.75, ignored_by_productivity=1, ignored_by_stats=1})
+    rm.AddProductRaw("fu_materials_magnet", {type="item", name="nickel-electromagnet", amount=1, independent_probability=0.75, ignored_by_productivity=1, ignored_by_stats=1})
     if data.raw["assembling-machine"]["fu_magnet"] then
       data.raw["assembling-machine"]["fu_magnet"].ingredient_count = nil
     end

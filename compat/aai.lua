@@ -80,7 +80,7 @@ if mods["jetpack"] then
 end
 
 if mods["space-exploration"] then
-  rm.AddProductRaw("se-scrap-hard-recycling", {type="item", name="nickel-ore", amount=1, probability=0.05})
+  rm.AddProductRaw("se-scrap-hard-recycling", {type="item", name="nickel-ore", amount=1, independent_probability=0.05})
 
   if parts.experimental then
 
@@ -189,9 +189,9 @@ if mods["space-exploration"] then
 
     local function add_catalyst(recipe, ingredient, amount, losschance, scrap, scrap_amount)
       rm.AddIngredient(recipe, ingredient, amount)
-      rm.AddProductRaw(recipe, {type="item", name=ingredient, amount=amount, probability=1.0 - losschance, ignored_by_productivity=amount, ignored_by_stats=amount})
+      rm.AddProductRaw(recipe, {type="item", name=ingredient, amount=amount, independent_probability=1.0 - losschance, ignored_by_productivity=amount, ignored_by_stats=amount})
       if scrap then
-        rm.AddProductRaw(recipe, {type="item", name=scrap, amount=scrap_amount, probability=losschance})
+        rm.AddProductRaw(recipe, {type="item", name=scrap, amount=scrap_amount, independent_probability=losschance})
       end
     end
 
