@@ -73,7 +73,7 @@ if not mods["galdocs-manufacturing"] then
       {
         type = "recipe",
         name = "invar-plate",
-        category = parts.foundryEnabled and "founding" or "smelting",
+        categor = parts.foundryEnabled and {"founding"} or {"smelting"},
         enabled = false,
         energy_required = 6.4,
         ingredients = {{type="item", name="iron-plate", amount=2}, {type="item", name="nickel-plate", amount=2}},
@@ -446,7 +446,7 @@ if parts.nitinol then
       {
         type = "recipe",
         name = "nitinol-plate",
-        category = parts.foundryEnabled and "founding" or "smelting",
+        categories = parts.foundryEnabled and {"founding"} or {"smelting"},
         energy_required = 16,
         ingredients = {{type="item", name="nickel-plate", amount=3}, {type="item", name="titanium-plate", amount=1}},
         results = {{type="item", name="nitinol-plate", amount=2}},
